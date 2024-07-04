@@ -72,6 +72,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C2340B32C3699490058CB33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C69C699F2C2ECB5C00FE4305 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5C2340B42C3699540058CB33 /* DataHandling */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataHandling;
+			sourceTree = "<group>";
+		};
+		5C2340B62C36996C0058CB33 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		C69C69912C2ECB5C00FE4305 = {
 			isa = PBXGroup;
 			children = (
@@ -95,9 +117,11 @@
 		C69C699C2C2ECB5C00FE4305 /* ClooFit */ = {
 			isa = PBXGroup;
 			children = (
+				5C2340B62C36996C0058CB33 /* Utils */,
+				5C2340B42C3699540058CB33 /* DataHandling */,
+				5C2340B32C3699490058CB33 /* Views */,
 				C69C69C72C2ECDBA00FE4305 /* Info.plist */,
 				C69C699D2C2ECB5C00FE4305 /* ClooFitApp.swift */,
-				C69C699F2C2ECB5C00FE4305 /* ContentView.swift */,
 				C69C69A12C2ECB5D00FE4305 /* Assets.xcassets */,
 				C69C69A32C2ECB5D00FE4305 /* Preview Content */,
 			);
