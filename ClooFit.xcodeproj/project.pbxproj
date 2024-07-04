@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4FA9EB6C2C36B1340002C3CE /* salvo.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA9EB6B2C36B1340002C3CE /* salvo.json */; };
 		89BC4B5F2C36A9BE007D6C35 /* clothes.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BC4B5E2C36A9BE007D6C35 /* clothes.json */; };
 		C68F04E92C36C95A00621532 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04E72C36C95A00621532 /* HomePage.swift */; };
 		C68F04EA2C36C95A00621532 /* SuggestionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04E82C36C95A00621532 /* SuggestionRow.swift */; };
@@ -40,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4FA9EB6B2C36B1340002C3CE /* salvo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = salvo.json; path = ../../../../../Desktop/salvo.json; sourceTree = "<group>"; };
 		89BC4B5E2C36A9BE007D6C35 /* clothes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clothes.json; sourceTree = "<group>"; };
 		C68F04E72C36C95A00621532 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePage.swift; path = ../../../../../Desktop/Cloofit/ClooFit/ClooFit/View/HomePage.swift; sourceTree = "<group>"; };
 		C68F04E82C36C95A00621532 /* SuggestionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestionRow.swift; path = ../../../../../Desktop/Cloofit/ClooFit/ClooFit/View/SuggestionRow.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				89BC4B5E2C36A9BE007D6C35 /* clothes.json */,
-				4FA9EB6B2C36B1340002C3CE /* salvo.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -295,7 +292,6 @@
 				C69C69A52C2ECB5D00FE4305 /* Preview Assets.xcassets in Resources */,
 				89BC4B5F2C36A9BE007D6C35 /* clothes.json in Resources */,
 				C69C69A22C2ECB5D00FE4305 /* Assets.xcassets in Resources */,
-				4FA9EB6C2C36B1340002C3CE /* salvo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
