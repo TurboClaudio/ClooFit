@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89BC4B5F2C36A9BE007D6C35 /* wardrobe.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BC4B5E2C36A9BE007D6C35 /* wardrobe.json */; };
 		C69C699E2C2ECB5C00FE4305 /* ClooFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69C699D2C2ECB5C00FE4305 /* ClooFitApp.swift */; };
 		C69C69A02C2ECB5C00FE4305 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69C699F2C2ECB5C00FE4305 /* ContentView.swift */; };
 		C69C69A22C2ECB5D00FE4305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69C69A12C2ECB5D00FE4305 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89BC4B5E2C36A9BE007D6C35 /* wardrobe.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wardrobe.json; sourceTree = "<group>"; };
 		C69C699A2C2ECB5C00FE4305 /* ClooFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClooFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69C699D2C2ECB5C00FE4305 /* ClooFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClooFitApp.swift; sourceTree = "<group>"; };
 		C69C699F2C2ECB5C00FE4305 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				C69C69C72C2ECDBA00FE4305 /* Info.plist */,
 				C69C699D2C2ECB5C00FE4305 /* ClooFitApp.swift */,
 				C69C69A12C2ECB5D00FE4305 /* Assets.xcassets */,
+				89BC4B5E2C36A9BE007D6C35 /* wardrobe.json */,
 				C69C69A32C2ECB5D00FE4305 /* Preview Content */,
 			);
 			path = ClooFit;
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C69C69A52C2ECB5D00FE4305 /* Preview Assets.xcassets in Resources */,
+				89BC4B5F2C36A9BE007D6C35 /* wardrobe.json in Resources */,
 				C69C69A22C2ECB5D00FE4305 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
