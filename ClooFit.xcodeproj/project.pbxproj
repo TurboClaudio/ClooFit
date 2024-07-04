@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< Updated upstream
 		4FA9EB6C2C36B1340002C3CE /* salvo.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA9EB6B2C36B1340002C3CE /* salvo.json */; };
 		89BC4B5F2C36A9BE007D6C35 /* clothes.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BC4B5E2C36A9BE007D6C35 /* clothes.json */; };
-=======
-		4FA9EB692C36AD130002C3CE /* salvo.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA9EB682C36AD130002C3CE /* salvo.json */; };
-		89BC4B5F2C36A9BE007D6C35 /* wardrobe.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BC4B5E2C36A9BE007D6C35 /* wardrobe.json */; };
->>>>>>> Stashed changes
+		C68F04E92C36C95A00621532 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04E72C36C95A00621532 /* HomePage.swift */; };
+		C68F04EA2C36C95A00621532 /* SuggestionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04E82C36C95A00621532 /* SuggestionRow.swift */; };
+		C68F04EE2C36C96B00621532 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04EB2C36C96A00621532 /* Article.swift */; };
+		C68F04EF2C36C96B00621532 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04EC2C36C96A00621532 /* Outfit.swift */; };
 		C69C699E2C2ECB5C00FE4305 /* ClooFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69C699D2C2ECB5C00FE4305 /* ClooFitApp.swift */; };
 		C69C69A02C2ECB5C00FE4305 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69C699F2C2ECB5C00FE4305 /* ContentView.swift */; };
 		C69C69A22C2ECB5D00FE4305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69C69A12C2ECB5D00FE4305 /* Assets.xcassets */; };
@@ -41,14 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< Updated upstream
 		4FA9EB6B2C36B1340002C3CE /* salvo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = salvo.json; path = ../../../../../Desktop/salvo.json; sourceTree = "<group>"; };
 		89BC4B5E2C36A9BE007D6C35 /* clothes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clothes.json; sourceTree = "<group>"; };
-=======
-		4FA9EB682C36AD130002C3CE /* salvo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = salvo.json; path = ../../../Desktop/salvo.json; sourceTree = "<group>"; };
-		4FA9EB6A2C36AD1D0002C3CE /* salvo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = salvo.json; sourceTree = "<group>"; };
-		89BC4B5E2C36A9BE007D6C35 /* wardrobe.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wardrobe.json; sourceTree = "<group>"; };
->>>>>>> Stashed changes
+		C68F04E72C36C95A00621532 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePage.swift; path = ../../../../../Desktop/Cloofit/ClooFit/ClooFit/View/HomePage.swift; sourceTree = "<group>"; };
+		C68F04E82C36C95A00621532 /* SuggestionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestionRow.swift; path = ../../../../../Desktop/Cloofit/ClooFit/ClooFit/View/SuggestionRow.swift; sourceTree = "<group>"; };
+		C68F04EB2C36C96A00621532 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		C68F04EC2C36C96A00621532 /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
 		C69C699A2C2ECB5C00FE4305 /* ClooFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClooFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69C699D2C2ECB5C00FE4305 /* ClooFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClooFitApp.swift; sourceTree = "<group>"; };
 		C69C699F2C2ECB5C00FE4305 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +87,8 @@
 		5C2340B32C3699490058CB33 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C68F04E72C36C95A00621532 /* HomePage.swift */,
+				C68F04E82C36C95A00621532 /* SuggestionRow.swift */,
 				C69C699F2C2ECB5C00FE4305 /* ContentView.swift */,
 			);
 			path = Views;
@@ -118,10 +117,19 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		C68F04ED2C36C96A00621532 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C68F04EB2C36C96A00621532 /* Article.swift */,
+				C68F04EC2C36C96A00621532 /* Outfit.swift */,
+			);
+			name = Models;
+			path = ../../../../Desktop/Cloofit/ClooFit/ClooFit/Models;
+			sourceTree = "<group>";
+		};
 		C69C69912C2ECB5C00FE4305 = {
 			isa = PBXGroup;
 			children = (
-				4FA9EB682C36AD130002C3CE /* salvo.json */,
 				C69C699C2C2ECB5C00FE4305 /* ClooFit */,
 				C69C69AD2C2ECB5D00FE4305 /* ClooFitTests */,
 				C69C69B72C2ECB5D00FE4305 /* ClooFitUITests */,
@@ -142,6 +150,7 @@
 		C69C699C2C2ECB5C00FE4305 /* ClooFit */ = {
 			isa = PBXGroup;
 			children = (
+				C68F04ED2C36C96A00621532 /* Models */,
 				5C2340B72C36ADCD0058CB33 /* Data */,
 				5C2340B62C36996C0058CB33 /* Utils */,
 				5C2340B42C3699540058CB33 /* DataHandling */,
@@ -149,11 +158,6 @@
 				C69C69C72C2ECDBA00FE4305 /* Info.plist */,
 				C69C699D2C2ECB5C00FE4305 /* ClooFitApp.swift */,
 				C69C69A12C2ECB5D00FE4305 /* Assets.xcassets */,
-<<<<<<< Updated upstream
-=======
-				4FA9EB6A2C36AD1D0002C3CE /* salvo.json */,
-				89BC4B5E2C36A9BE007D6C35 /* wardrobe.json */,
->>>>>>> Stashed changes
 				C69C69A32C2ECB5D00FE4305 /* Preview Content */,
 			);
 			path = ClooFit;
@@ -291,11 +295,7 @@
 				C69C69A52C2ECB5D00FE4305 /* Preview Assets.xcassets in Resources */,
 				89BC4B5F2C36A9BE007D6C35 /* clothes.json in Resources */,
 				C69C69A22C2ECB5D00FE4305 /* Assets.xcassets in Resources */,
-<<<<<<< Updated upstream
 				4FA9EB6C2C36B1340002C3CE /* salvo.json in Resources */,
-=======
-				4FA9EB692C36AD130002C3CE /* salvo.json in Resources */,
->>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +321,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C69C69A02C2ECB5C00FE4305 /* ContentView.swift in Sources */,
+				C68F04E92C36C95A00621532 /* HomePage.swift in Sources */,
+				C68F04EF2C36C96B00621532 /* Outfit.swift in Sources */,
+				C68F04EA2C36C95A00621532 /* SuggestionRow.swift in Sources */,
 				C69C699E2C2ECB5C00FE4305 /* ClooFitApp.swift in Sources */,
+				C68F04EE2C36C96B00621532 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
