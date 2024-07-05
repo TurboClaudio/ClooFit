@@ -509,5 +509,119 @@
         "weather" : "cold"
     },
     
+    {
+        "id": "SO33",
+        "gender": "unisex",
+        "name": "short jeans",
+        "material": "jeans",
+        "mainColor": "blue",
+        "mainColorRGB" : {
+            "r" : 55,
+            "g" : 61,
+            "b" : 78
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO34",
+        "gender": "unisex",
+        "name": "hoodie",
+        "material": "wool",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 30,
+            "g" : 30,
+            "b" : 30
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO35",
+        "gender": "unisex",
+        "name": "hoodie",
+        "material": "wool",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 220,
+            "g" : 220,
+            "b" : 220
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO36",
+        "gender": "unisex",
+        "name": "hoodie",
+        "material": "wool",
+        "mainColor": "blue",
+        "mainColorRGB" : {
+            "r" : 40,
+            "g" : 80,
+            "b" : 140
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO37",
+        "gender": "unisex",
+        "name": "hoodie",
+        "material": "wool",
+        "mainColor": "dark green",
+        "mainColorRGB" : {
+            "r" : 5,
+            "g" : 70,
+            "b" : 65
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO38",
+        "gender": "unisex",
+        "name": "hoodie",
+        "material": "wool",
+        "mainColor": "",
+        "mainColorRGB" : {
+            "r" : 190,
+            "g" : 60,
+            "b" : 60
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO39",
+        "gender": "unisex",
+        "name": "hoodie",
+        "material": "wool",
+        "mainColor": "yellow",
+        "mainColorRGB" : {
+            "r" : 240,
+            "g" : 200,
+            "b" : 100
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    
+    
     
 ]
