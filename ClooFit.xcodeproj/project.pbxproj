@@ -21,6 +21,7 @@
 		C69C69AF2C2ECB5D00FE4305 /* ClooFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69C69AE2C2ECB5D00FE4305 /* ClooFitTests.swift */; };
 		C69C69B92C2ECB5D00FE4305 /* ClooFitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69C69B82C2ECB5D00FE4305 /* ClooFitUITests.swift */; };
 		C69C69BB2C2ECB5D00FE4305 /* ClooFitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69C69BA2C2ECB5D00FE4305 /* ClooFitUITestsLaunchTests.swift */; };
+		E83858792C382E870074F42B /* ChooseAnOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83858782C382E870074F42B /* ChooseAnOutfit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		C69C69B82C2ECB5D00FE4305 /* ClooFitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClooFitUITests.swift; sourceTree = "<group>"; };
 		C69C69BA2C2ECB5D00FE4305 /* ClooFitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClooFitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C69C69C72C2ECDBA00FE4305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E83858782C382E870074F42B /* ChooseAnOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAnOutfit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				C68F04E72C36C95A00621532 /* HomePage.swift */,
 				C68F04E82C36C95A00621532 /* SuggestionRow.swift */,
 				C69C699F2C2ECB5C00FE4305 /* ContentView.swift */,
+				E83858782C382E870074F42B /* ChooseAnOutfit.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				C69C699E2C2ECB5C00FE4305 /* ClooFitApp.swift in Sources */,
 				C68F04EE2C36C96B00621532 /* Article.swift in Sources */,
 				4F1830012C37FB67001F8EC8 /* articolo.swift in Sources */,
+				E83858792C382E870074F42B /* ChooseAnOutfit.swift in Sources */,
 				4F182FFF2C37F919001F8EC8 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
