@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Outfit {
+struct Outfit: Identifiable {
+    var id = UUID()
     var upper: article
     var lower: article
     

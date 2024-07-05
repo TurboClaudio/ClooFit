@@ -15,7 +15,7 @@ struct ContentView: View {
                     Label("Colors", systemImage: "rays")
                         .tag(0)
                 }
-            Text("Homepage")
+            HomePage()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }

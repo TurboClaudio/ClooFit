@@ -7,33 +7,36 @@
 
 import SwiftUI
 
-/* struct HomePage: View {
+import SwiftUI
+
+struct HomePage: View {
+    // Sample data
+    let outfits: [Outfit] = [
+        Outfit(upper: catalogo[0], lower: catalogo[31]),
+        Outfit(upper: catalogo[1], lower: catalogo[30]),
+        Outfit(upper: catalogo[33], lower: catalogo[29])
+    ]
+    
     var body: some View {
-        
-        // CS Creazione lista di outfit fittizia.
-        // CS Dovrebbe esserci la lista degli outfit suggeriti, dove ogni outfit è composto da un upper (e un lower se non è un vestito lungo da donna.
-        
-        var outfits : [Outfit] = [
-            Outfit(upper: catalogo[0], lower: catalogo[31]),
-            Outfit(upper: catalogo[1], lower: catalogo[30]),
-            Outfit(upper: catalogo[33], lower: catalogo[29])
-            
-        ]
-        
-        // CS Bozza: Manca ChooseAnOutfit per testarlo
-        
         NavigationView {
-            List(outfits) {
-                outfit in NavigationLink(destination: ChooseAnOutfit(outfit: outfit) {
-                    
+            ScrollView {
+                LazyVStack(spacing: 20) {
+                    ForEach(outfits) { outfit in
+                        NavigationLink(destination: ChooseAnOutfit(outfit: outfit)) {
+                            SuggestionRow(outfit: outfit)
+                                .background(Color(red: (245.0 / 255.0), green: (245.0 / 255.0), blue: (247.0/255.0)))
+                                .cornerRadius(10)
+                                .padding(.horizontal, 20)
+                        }
+                    }
                 }
+                .padding(.top, 20)
             }
-        }.navigationTitle("Choose an Outfit")
+            .navigationTitle("Choose an Outfit")
+        }
     }
 }
-
 
 #Preview {
     HomePage()
 }
-*/
