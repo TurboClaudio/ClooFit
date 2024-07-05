@@ -17,17 +17,6 @@ struct ChooseAnOutfit: View {
         
         ZStack{
             VStack{
-              
-                HStack{
-                   
-                    Image(systemName: "chevron.backward")
-                        .padding(.leading,15)
-                    Spacer()
-                    Text("Next")
-                        .padding(.trailing,15)
-                }
-                .padding(.top,10)
-                
                 outfit.upper.image
                     .resizable()
                     .frame(width: 200,height: 200)

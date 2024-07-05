@@ -24,6 +24,7 @@ struct SuggestionRow: View {
                     Text(outfit.upper.mainColor.capitalized)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, -10)
+                        .foregroundColor(.black)
                     
                 }
                 HStack {
@@ -33,6 +34,7 @@ struct SuggestionRow: View {
                     Text(outfit.lower.mainColor.capitalized)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, -10)
+                        .foregroundColor(.black)
                 }
             }
             
