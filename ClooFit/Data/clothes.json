@@ -174,22 +174,6 @@
     },
     
     {
-        "id": "SO12",
-        "gender": "unisex",
-        "name": "t-shirt",
-        "material": "cotton",
-        "mainColor": "black",
-        "mainColorRGB" : {
-            "r" : 0,
-            "g" : 0,
-            "b" : 0
-        },
-        "type" : "top",
-        "elegance" : "informal",
-        "weather" : "hot"
-    },
-    
-    {
         "id": "SO13",
         "gender": "unisex",
         "name": "t-shirt",
