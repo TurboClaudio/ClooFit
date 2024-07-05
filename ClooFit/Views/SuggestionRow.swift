@@ -21,17 +21,19 @@ struct SuggestionRow: View {
                     Circle().fill(Color(red: outfit.upper.mainColorRGB.norm_r, green: outfit.upper.mainColorRGB.norm_g, blue: outfit.upper.mainColorRGB.norm_b))
                         .frame(width: 20)
                         .padding()
-                    Text(outfit.upper.mainColor)
+                    Text(outfit.upper.mainColor.capitalized)
+                        .multilineTextAlignment(.center)
                         .padding(.horizontal, -10)
+                    
                 }
                 HStack {
                     Circle().fill(Color(red: outfit.lower.mainColorRGB.norm_r, green: outfit.lower.mainColorRGB.norm_g, blue: outfit.lower.mainColorRGB.norm_b))
                         .frame(width: 20)
                         .padding()
-                    Text(outfit.lower.mainColor)
+                    Text(outfit.lower.mainColor.capitalized)
+                        .multilineTextAlignment(.center)
                         .padding(.horizontal, -10)
                 }
-                
             }
             
             Spacer()
@@ -55,12 +57,14 @@ struct SuggestionRow: View {
         }
         .background(Color(red: (245.0 / 255.0), green: (245.0 / 255.0), blue: (247.0/255.0)))
         .cornerRadius(10)
-        .padding(.all, 30)
+        .padding(.horizontal, 30)
     }
 }
 
 #Preview {
-    //SuggestionRow(outfit: Outfit(upper: Article(id: 0, path: "SO01", red: 33, green: 33, blue: 33, colorLabel: "Black"), lower: Article(id: 1, path: "SO31", red: 35, green: 44, blue: 49, colorLabel: "Blue")))
-    SuggestionRow(outfit: Outfit(upper: catalogo[0], lower: catalogo[31]))
-    
+    Group {
+        SuggestionRow(outfit: Outfit(upper: catalogo[0], lower: catalogo[31]))
+        SuggestionRow(outfit: Outfit(upper: catalogo[1], lower: catalogo[30]))
+        SuggestionRow(outfit: Outfit(upper: catalogo[33], lower: catalogo[29]))
+    }
 }

@@ -450,7 +450,7 @@
         "gender": "man",
         "name": "pants",
         "material": "silk",
-        "mainColor": " dark blue",
+        "mainColor": "dark blue",
         "mainColorRGB" : {
             "r" : 65,
             "g" : 70,

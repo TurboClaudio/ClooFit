@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Jeans@1x.png",
+      "filename" : "Jeans@3x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,7 +11,7 @@
       "scale" : "2x"
     },
     {
-      "filename" : "Jeans@3x.png",
+      "filename" : "Jeans@1x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
