@@ -44,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4F182FFE2C37F919001F8EC8 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModelData.swift; path = ClooFit/ModelData.swift; sourceTree = SOURCE_ROOT; };
+		4F182FFE2C37F919001F8EC8 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModelData.swift; path = ClooFit/Utils/ModelData.swift; sourceTree = SOURCE_ROOT; };
 		4F1830002C37FB67001F8EC8 /* articolo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = articolo.swift; sourceTree = "<group>"; };
 		4F1830022C3828D9001F8EC8 /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
 		4F1830042C38660A001F8EC8 /* jsonFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonFunction.swift; sourceTree = "<group>"; };
@@ -113,6 +113,7 @@
 		5C2340B62C36996C0058CB33 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4F182FFE2C37F919001F8EC8 /* ModelData.swift */,
 				4F1830042C38660A001F8EC8 /* jsonFunction.swift */,
 			);
 			path = Utils;
@@ -130,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				C68F04EB2C36C96A00621532 /* Article.swift */,
-				4F182FFE2C37F919001F8EC8 /* ModelData.swift */,
 				4F1830002C37FB67001F8EC8 /* articolo.swift */,
 				C68F04EC2C36C96A00621532 /* Outfit.swift */,
 				4F1830022C3828D9001F8EC8 /* Utente.swift */,

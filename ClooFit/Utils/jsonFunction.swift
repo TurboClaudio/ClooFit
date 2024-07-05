@@ -48,3 +48,19 @@ func typeFilter(from array: [article], type: String) -> [article]? {
     }
     return subarray
 }
+
+
+
+//vede se è abbinabile il colore (semplicemnte vedendo se è un suo complemntare più o meno) non tine condo di luminosità e saturazine però
+//da usare con cura
+func areColorsHarmonious(upper: article, lower: article) -> Bool {
+    
+    // Calcolare la tonalità complementare del primo colore
+    let complementaryHue = (upper.mainColorRGB.h + 180).truncatingRemainder(dividingBy: 360)
+    
+    // Controllare se la differenza di tonalità è vicina a 180 gradi
+    let hueDifference = abs(complementaryHue - lower.mainColorRGB.h)
+    let isComplementary = hueDifference < 20 || hueDifference > 340
+    
+    return isComplementary
+}
