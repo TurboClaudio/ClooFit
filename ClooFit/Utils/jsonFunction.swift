@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+//salva l'utente in un file json
 func salva(users: Utente){
     do {
         // Crea un'istanza di JSONEncoder
@@ -36,4 +36,15 @@ func salva(users: Utente){
     } catch {
         print("Errore durante la scrittura del file JSON: \(error.localizedDescription)")
     }
+}
+
+// passa array article e filtra per tipo passato (top or bottom)
+func typeFilter(from array: [article], type: String) -> [article]? {
+    var subarray: [article] = []
+    for articolo in array{
+        if(articolo.type == type){
+            subarray.append(articolo)
+        }
+    }
+    return subarray
 }
