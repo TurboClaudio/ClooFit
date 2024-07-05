@@ -12,4 +12,5 @@ struct Utente{
     var eta: Int
     var nome: String
     var preferenzeStile: String
+    var stagione: Int
 }
