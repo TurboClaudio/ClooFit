@@ -22,7 +22,7 @@ struct Article {
         Image(path)
     }
     
-    init(id: Int, path: String, red: Double, green: Double, blue: Double, colorLabel: String) {
+    /*init(id: Int, path: String, red: Double, green: Double, blue: Double, colorLabel: String) {
         self.id = id
         self.path = path
         self.red = red
@@ -32,5 +32,5 @@ struct Article {
         self.blue = blue
         self.blueNormalized = blue / 255
         self.colorLabel = colorLabel
-    }
+    }*/
 }

@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 
 struct Outfit {
-    var upper: Article
-    var lower: Article
+    var upper: article
+    var lower: article
     
-    init(upper: Article, lower: Article) {
+    init(upper: article, lower: article) {
         self.upper = upper
         self.lower = lower
     }

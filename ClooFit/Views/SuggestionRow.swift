@@ -18,17 +18,17 @@ struct SuggestionRow: View {
             
             VStack (alignment: .leading){
                 HStack {
-                    Circle().fill(Color(red: outfit.upper.redNormalized, green: outfit.upper.blueNormalized, blue: outfit.upper.greenNormalized))
+                    Circle().fill(Color(red: outfit.upper.mainColorRGB.norm_r, green: outfit.upper.mainColorRGB.norm_g, blue: outfit.upper.mainColorRGB.norm_b))
                         .frame(width: 20)
                         .padding()
-                    Text(outfit.upper.colorLabel)
+                    Text(outfit.upper.mainColor)
                         .padding(.horizontal, -10)
                 }
                 HStack {
-                    Circle().fill(Color(red: outfit.lower.redNormalized, green: outfit.lower.blueNormalized, blue: outfit.lower.greenNormalized))
+                    Circle().fill(Color(red: outfit.lower.mainColorRGB.norm_r, green: outfit.lower.mainColorRGB.norm_g, blue: outfit.lower.mainColorRGB.norm_b))
                         .frame(width: 20)
                         .padding()
-                    Text(outfit.lower.colorLabel)
+                    Text(outfit.lower.mainColor)
                         .padding(.horizontal, -10)
                 }
                 
@@ -60,5 +60,7 @@ struct SuggestionRow: View {
 }
 
 #Preview {
-    SuggestionRow(outfit: Outfit(upper: Article(id: 0, path: "SO01", red: 33, green: 33, blue: 33, colorLabel: "Black"), lower: Article(id: 1, path: "SO31", red: 35, green: 44, blue: 49, colorLabel: "Blue")))
+    //SuggestionRow(outfit: Outfit(upper: Article(id: 0, path: "SO01", red: 33, green: 33, blue: 33, colorLabel: "Black"), lower: Article(id: 1, path: "SO31", red: 35, green: 44, blue: 49, colorLabel: "Blue")))
+    SuggestionRow(outfit: Outfit(upper: catalogo[0], lower: catalogo[31]))
+    
 }
