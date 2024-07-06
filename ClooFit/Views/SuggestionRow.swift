@@ -21,17 +21,21 @@ struct SuggestionRow: View {
                     Circle().fill(Color(red: outfit.upper.mainColorRGB.norm_r, green: outfit.upper.mainColorRGB.norm_g, blue: outfit.upper.mainColorRGB.norm_b))
                         .frame(width: 20)
                         .padding()
-                    Text(outfit.upper.mainColor)
+                    Text(outfit.upper.mainColor.capitalized)
+                        .multilineTextAlignment(.center)
                         .padding(.horizontal, -10)
+                        .foregroundColor(.black)
+                    
                 }
                 HStack {
                     Circle().fill(Color(red: outfit.lower.mainColorRGB.norm_r, green: outfit.lower.mainColorRGB.norm_g, blue: outfit.lower.mainColorRGB.norm_b))
                         .frame(width: 20)
                         .padding()
-                    Text(outfit.lower.mainColor)
+                    Text(outfit.lower.mainColor.capitalized)
+                        .multilineTextAlignment(.center)
                         .padding(.horizontal, -10)
+                        .foregroundColor(.black)
                 }
-                
             }
             
             Spacer()
@@ -55,7 +59,7 @@ struct SuggestionRow: View {
         }
         .background(Color(red: (245.0 / 255.0), green: (245.0 / 255.0), blue: (247.0/255.0)))
         .cornerRadius(10)
-        .padding(.all, 30)
+        .padding(.horizontal, 30)
     }
 }
 
