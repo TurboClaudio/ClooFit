@@ -38,7 +38,7 @@ func salva(users: Utente){
     }
 }
 
-// passa array article e filtra per tipo passato (top or bottom)
+// passa array article e filtra per tipo passato (top or bottom or topbottom)
 func typeFilter(from array: [article], type: String) -> [article]? {
     var subarray: [article] = []
     for articolo in array{
@@ -48,6 +48,29 @@ func typeFilter(from array: [article], type: String) -> [article]? {
     }
     return subarray
 }
+
+// passa array article e filtra per eleganza passata (informal or formal)
+func eleganceFilter(from array: [article], elegance: String) -> [article]? {
+    var subarray: [article] = []
+    for articolo in array{
+        if(articolo.elegance == elegance){
+            subarray.append(articolo)
+        }
+    }
+    return subarray
+}
+
+// passa array article e filtra per genere passata (man or woman or unisex) quelli unisex vengono sempre presi
+func genderFilter(from array: [article], gender: String) -> [article]? {
+    var subarray: [article] = []
+    for articolo in array{
+        if( articolo.gender == "unisex" || articolo.gender == gender){
+            subarray.append(articolo)
+        }
+    }
+    return subarray
+}
+
 
 
 
