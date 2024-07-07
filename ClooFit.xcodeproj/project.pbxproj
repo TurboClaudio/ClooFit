@@ -49,7 +49,7 @@
 		4F182FFE2C37F919001F8EC8 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModelData.swift; path = ClooFit/Utils/ModelData.swift; sourceTree = SOURCE_ROOT; };
 		4F1830002C37FB67001F8EC8 /* articolo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = articolo.swift; sourceTree = "<group>"; };
 		4F1830022C3828D9001F8EC8 /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
-		4F18300A2C3ADF13001F8EC8 /* jsonFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonFunction.swift; sourceTree = "<group>"; };
+		4F18300A2C3ADF13001F8EC8 /* jsonFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = jsonFunction.swift; path = ../../jsonFunction.swift; sourceTree = "<group>"; };
 		5CDAF1E02C382DF200F3618C /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		5CDAF1E22C38404700F3618C /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		89BC4B5E2C36A9BE007D6C35 /* clothes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clothes.json; sourceTree = "<group>"; };
@@ -118,6 +118,7 @@
 		5C2340B62C36996C0058CB33 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4F18300A2C3ADF13001F8EC8 /* jsonFunction.swift */,
 				4F182FFE2C37F919001F8EC8 /* ModelData.swift */,
 			);
 			path = Utils;
@@ -154,7 +155,6 @@
 		C69C69912C2ECB5C00FE4305 = {
 			isa = PBXGroup;
 			children = (
-				4F18300A2C3ADF13001F8EC8 /* jsonFunction.swift */,
 				C69C699C2C2ECB5C00FE4305 /* ClooFit */,
 				C69C69AD2C2ECB5D00FE4305 /* ClooFitTests */,
 				C69C69B72C2ECB5D00FE4305 /* ClooFitUITests */,
