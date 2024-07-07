@@ -89,6 +89,10 @@ struct article: Codable, Identifiable {
    
 }
 
+struct articleID: Codable, Identifiable {
+    var id: String
+}
+
 /*
  "id": "SO01",
  "gender": "unisex",
