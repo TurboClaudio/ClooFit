@@ -29,3 +29,4 @@ struct ItemView: View {
 #Preview {
     ItemView(item: catalogo[0])
 }
+

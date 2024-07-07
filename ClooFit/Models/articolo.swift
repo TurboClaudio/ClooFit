@@ -71,7 +71,7 @@ struct colorRGB: Codable {
     }
 }
 
-struct article: Codable{
+struct article: Codable, Identifiable {
     var id: String
     var gender: String
     var name: String
