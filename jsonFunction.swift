@@ -71,7 +71,17 @@ func genderFilter(from array: [article], gender: String) -> [article]? {
     return subarray
 }
 
-
+//cerca per id
+func cercaCapo(id: String)->article{
+    var ris: article = catalogo[0]
+    for scor in catalogo{
+        if scor.id == id{
+            ris = scor
+            break
+        }
+    }
+    return ris
+}
 
 
 //vede se è abbinabile il colore (semplicemnte vedendo se è un suo complemntare più o meno)
