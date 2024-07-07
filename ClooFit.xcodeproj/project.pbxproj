@@ -118,6 +118,7 @@
 			children = (
 				4F182FFE2C37F919001F8EC8 /* ModelData.swift */,
 				4F1830042C38660A001F8EC8 /* jsonFunction.swift */,
+				4F1830062C397D8D001F8EC8 /* generet.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -349,6 +350,7 @@
 				5CDAF1E12C382DF200F3618C /* ItemView.swift in Sources */,
 				C68F04EA2C36C95A00621532 /* SuggestionRow.swift in Sources */,
 				C69C699E2C2ECB5C00FE4305 /* ClooFitApp.swift in Sources */,
+				4F1830072C397D8D001F8EC8 /* generet.swift in Sources */,
 				C68F04EE2C36C96B00621532 /* Article.swift in Sources */,
 				5CDAF1E32C38404700F3618C /* ItemListView.swift in Sources */,
 				4F1830032C3828D9001F8EC8 /* Utente.swift in Sources */,

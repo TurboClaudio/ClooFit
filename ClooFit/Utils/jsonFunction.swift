@@ -38,7 +38,7 @@ func salva(users: Utente){
     }
 }
 
-// passa array article e filtra per tipo passato (top or bottom)
+// passa array article e filtra per tipo passato (top or bottom or topbottom)
 func typeFilter(from array: [article], type: String) -> [article]? {
     var subarray: [article] = []
     for articolo in array{
@@ -49,18 +49,56 @@ func typeFilter(from array: [article], type: String) -> [article]? {
     return subarray
 }
 
+// passa array article e filtra per eleganza passata (informal or formal)
+func eleganceFilter(from array: [article], elegance: String) -> [article]? {
+    var subarray: [article] = []
+    for articolo in array{
+        if(articolo.elegance == elegance){
+            subarray.append(articolo)
+        }
+    }
+    return subarray
+}
+
+// passa array article e filtra per genere passata (man or woman or unisex) quelli unisex vengono sempre presi
+func genderFilter(from array: [article], gender: String) -> [article]? {
+    var subarray: [article] = []
+    for articolo in array{
+        if( articolo.gender == "unisex" || articolo.gender == gender){
+            subarray.append(articolo)
+        }
+    }
+    return subarray
+}
 
 
-//vede se è abbinabile il colore (semplicemnte vedendo se è un suo complemntare più o meno) non tine condo di luminosità e saturazine però
+
+
+//vede se è abbinabile il colore (semplicemnte vedendo se è un suo complemntare più o meno)
 //da usare con cura
 func areColorsHarmonious(upper: article, lower: article) -> Bool {
-    
+    var isComplementary: Bool
+    var ris: Bool
     // Calcolare la tonalità complementare del primo colore
     let complementaryHue = (upper.mainColorRGB.h + 180).truncatingRemainder(dividingBy: 360)
-    
     // Controllare se la differenza di tonalità è vicina a 180 gradi
     let hueDifference = abs(complementaryHue - lower.mainColorRGB.h)
-    let isComplementary = hueDifference < 20 || hueDifference > 340
     
-    return isComplementary
+    let saturationDifference = abs(upper.mainColorRGB.s - lower.mainColorRGB.s)
+    let isSaturationSimilar = saturationDifference < 0.3
+        
+        // Controllare se la luminosità è simile (entro un certo range)
+    let lightnessDifference = abs(upper.mainColorRGB.l - lower.mainColorRGB.l)
+    let isLightnessSimilar = lightnessDifference < 0.3
+    
+    // se è nero o bianco è compatibile
+    if upper.mainColorRGB.l <= 0.1 || upper.mainColorRGB.l >= 0.9 || lower.mainColorRGB.l <= 0.1 || lower.mainColorRGB.l >= 0.9{
+        ris = true
+    }else{
+        // altrimenti vedi se è più o meno un complementare facendo caso anche alla luminosità e alla saturazione
+        isComplementary = hueDifference < 20 || hueDifference > 340
+        ris = isComplementary && isSaturationSimilar && isLightnessSimilar
+    }
+
+    return ris
 }
