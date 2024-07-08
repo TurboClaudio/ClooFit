@@ -6,9 +6,11 @@
 //
 
 import Foundation
+var users: [Utente] = load("Utente.json")
+
 
 //salva l'utente in un file json
-func salva(users: Utente){
+func salva(){
     do {
         // Crea un'istanza di JSONEncoder
         let encoder = JSONEncoder()
