@@ -10,7 +10,7 @@ var users: [Utente] = load("Utente.json")
 
 
 //salva l'utente in un file json
-func salva(){
+func salvaUtente(){
     do {
         // Crea un'istanza di JSONEncoder
         let encoder = JSONEncoder()
