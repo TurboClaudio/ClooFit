@@ -10,6 +10,7 @@
 		4F182FFF2C37F919001F8EC8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F182FFE2C37F919001F8EC8 /* ModelData.swift */; };
 		4F1830012C37FB67001F8EC8 /* articolo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1830002C37FB67001F8EC8 /* articolo.swift */; };
 		4F1830032C3828D9001F8EC8 /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1830022C3828D9001F8EC8 /* Utente.swift */; };
+		4F18300B2C3ADF13001F8EC8 /* jsonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F18300A2C3ADF13001F8EC8 /* jsonFunction.swift */; };
 		5CDAF1E12C382DF200F3618C /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF1E02C382DF200F3618C /* ItemView.swift */; };
 		5CDAF1E32C38404700F3618C /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF1E22C38404700F3618C /* ItemListView.swift */; };
 		89BC4B5F2C36A9BE007D6C35 /* clothes.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BC4B5E2C36A9BE007D6C35 /* clothes.json */; };
@@ -49,6 +50,7 @@
 		4F182FFE2C37F919001F8EC8 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModelData.swift; path = ClooFit/Utils/ModelData.swift; sourceTree = SOURCE_ROOT; };
 		4F1830002C37FB67001F8EC8 /* articolo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = articolo.swift; sourceTree = "<group>"; };
 		4F1830022C3828D9001F8EC8 /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
+		4F18300A2C3ADF13001F8EC8 /* jsonFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = jsonFunction.swift; path = ../../jsonFunction.swift; sourceTree = "<group>"; };
 		5CDAF1E02C382DF200F3618C /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		5CDAF1E22C38404700F3618C /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		89BC4B5E2C36A9BE007D6C35 /* clothes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clothes.json; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		5C2340B62C36996C0058CB33 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4F18300A2C3ADF13001F8EC8 /* jsonFunction.swift */,
 				4F182FFE2C37F919001F8EC8 /* ModelData.swift */,
 				89BC4B622C3AE0F9007D6C35 /* File.swift */,
 			);
@@ -352,6 +355,7 @@
 				C69C699E2C2ECB5C00FE4305 /* ClooFitApp.swift in Sources */,
 				C68F04EE2C36C96B00621532 /* Article.swift in Sources */,
 				5CDAF1E32C38404700F3618C /* ItemListView.swift in Sources */,
+				4F18300B2C3ADF13001F8EC8 /* jsonFunction.swift in Sources */,
 				4F1830032C3828D9001F8EC8 /* Utente.swift in Sources */,
 				4F1830012C37FB67001F8EC8 /* articolo.swift in Sources */,
 				89BC4B632C3AE0F9007D6C35 /* File.swift in Sources */,
