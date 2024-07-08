@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Utente{
+struct Utente: Codable{
     var eta: Int
     var nome: String
     var preferenzeStile: String

@@ -1,5 +1,21 @@
 [
     {
+        "id": "SO00",
+        "gender": "",
+        "name": "",
+        "material": "",
+        "mainColor": "",
+        "mainColorRGB" : {
+            "r" : 0,
+            "g" : 0,
+            "b" : 0
+        },
+        "type" : "",
+        "elegance" : "",
+        "weather" : ""
+    },
+    
+    {
         "id": "SO01",
         "gender": "unisex",
         "name": "t-shirt",
