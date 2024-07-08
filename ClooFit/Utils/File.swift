@@ -11,7 +11,7 @@ import Foundation
 var armadio: [article] = load("armadio.json")
 
 
-func salvaArmadio {
+func salvaArmadio(){
     do {
         // Crea un'istanza di JSONEncoder
         let encoder = JSONEncoder()
