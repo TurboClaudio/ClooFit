@@ -1,6 +1,6 @@
 [
     {
-        "id": "SO00",
+        "id": "SO00U",
         "gender": "",
         "name": "",
         "material": "",
@@ -10,7 +10,23 @@
             "g" : 0,
             "b" : 0
         },
-        "type" : "",
+        "type" : "top",
+        "elegance" : "",
+        "weather" : ""
+    },
+    
+    {
+        "id": "SO00L",
+        "gender": "",
+        "name": "",
+        "material": "",
+        "mainColor": "",
+        "mainColorRGB" : {
+            "r" : 0,
+            "g" : 0,
+            "b" : 0
+        },
+        "type" : "bottom",
         "elegance" : "",
         "weather" : ""
     },
