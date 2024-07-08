@@ -46,7 +46,7 @@ func salvaArmadio {
 
 // fare funzioni per il salvataggio dei capi nel mio armadio personale, gia quella che c'è
 
-
+// funzione
 
 func aggiungiAlArmadio(vestito: article) {
     if !armadio.contains(where: { $0.id == vestito.id }) {
