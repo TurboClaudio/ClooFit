@@ -10,7 +10,7 @@
             "g" : 0,
             "b" : 0
         },
-        "type" : "top",
+        "type" : "topDefault",
         "elegance" : "",
         "weather" : ""
     },
@@ -26,7 +26,7 @@
             "g" : 0,
             "b" : 0
         },
-        "type" : "bottom",
+        "type" : "bottomDefault",
         "elegance" : "",
         "weather" : ""
     },
