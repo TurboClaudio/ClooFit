@@ -60,7 +60,7 @@
 		5CDAF1F82C3C3BB100F3618C /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		5CDAF1FC2C3C3BE200F3618C /* ItemViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewDetail.swift; sourceTree = "<group>"; };
 		89BC4B5E2C36A9BE007D6C35 /* clothes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clothes.json; sourceTree = "<group>"; };
-		89BC4B642C3D3735007D6C35 /* armadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = armadio.swift; sourceTree = "<group>"; };
+		89BC4B642C3D3735007D6C35 /* armadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = armadio.swift; path = ../../armadio.swift; sourceTree = "<group>"; };
 		A716DF702C39467900CCA571 /* Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		C68F04E72C36C95A00621532 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		C68F04E82C36C95A00621532 /* SuggestionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SuggestionRow.swift; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 1; };
@@ -127,6 +127,7 @@
 		5C2340B62C36996C0058CB33 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				89BC4B642C3D3735007D6C35 /* armadio.swift */,
 				4F18300A2C3ADF13001F8EC8 /* jsonFunction.swift */,
 				4F1830122C3D12D6001F8EC8 /* generateOutfit.swift */,
 				4F182FFE2C37F919001F8EC8 /* ModelData.swift */,
@@ -174,7 +175,6 @@
 		C69C69912C2ECB5C00FE4305 = {
 			isa = PBXGroup;
 			children = (
-				89BC4B642C3D3735007D6C35 /* armadio.swift */,
 				C69C699C2C2ECB5C00FE4305 /* ClooFit */,
 				C69C69AD2C2ECB5D00FE4305 /* ClooFitTests */,
 				C69C69B72C2ECB5D00FE4305 /* ClooFitUITests */,
