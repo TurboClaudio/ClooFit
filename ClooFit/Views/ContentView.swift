@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var selectedTab = 1  // Set the initial tab to 1 (HomePage)
+    
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
            Palette()
                 .tabItem {
                     Label("Colors", systemImage: "rays")
