@@ -25,6 +25,20 @@ func generateOutfit(array:[article], weather: String, gender: String, elegance: 
     
 }
 
+func getArticles(array: [Outfit], type: String) -> [article]{
+    var ris: [article] = []
+    if(type == "top"){
+        for fit in array{
+            ris.append(fit.upper)
+        }
+    }else{
+        for fit in array{
+            ris.append(fit.lower)
+        }
+    }
+    return ris
+}
+
 /*notDefaultFilter(array: [Outfit]) -> [Outfit]{
     
 }*/
