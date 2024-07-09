@@ -51,7 +51,7 @@ struct SuggestionRow: View {
                 outfit.lower.image
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 102, height: 102)
+                    .frame(width: 200, height: 180)
                     .offset(y: -25)
                     .padding(.bottom, -1)
                     .shadow(radius: 5)
@@ -65,6 +65,6 @@ struct SuggestionRow: View {
 
 #Preview {
     //SuggestionRow(outfit: Outfit(upper: Article(id: 0, path: "SO01", red: 33, green: 33, blue: 33, colorLabel: "Black"), lower: Article(id: 1, path: "SO31", red: 35, green: 44, blue: 49, colorLabel: "Blue")))
-    SuggestionRow(outfit: Outfit(upper: catalogo[1], lower: catalogo[31]))
+    SuggestionRow(outfit: Outfit(upper: catalogo[1], lower: catalogo[26]))
     
 }
