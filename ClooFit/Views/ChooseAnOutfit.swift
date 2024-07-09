@@ -1,16 +1,18 @@
 //
-//  view.swift
-//  view
+//  ChooseAnOutfit.swift
+//  ChooseAnOutfit
 //
 //  Created by Giuseppe Guagliardo on 04/07/24.
 //
 
 import SwiftUI
 
+
 struct UpperSwipeView: View {
     var items: [article]
     var articleSelected: article
-    @State var currentPage: Int
+    @Binding var currentPage: Int
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $currentPage) {
@@ -31,7 +33,7 @@ struct UpperSwipeView: View {
 struct LowerSwipeView: View {
     var items: [article]
     var articleSelected: article
-    @State var currentPage: Int
+    @Binding var currentPage: Int
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -52,18 +54,23 @@ struct LowerSwipeView: View {
 }
 
 struct ChooseAnOutfit: View {
-    @State private var vestiti_eleganti = false
-    var upperSelected: article
-    var lowerSelected: article
-    var currentUpperIndex: Int
-    var currentLowerIndex: Int
+    
+    @State var vestiti_eleganti: Bool
+    @State var upperSelected: article
+    @State var lowerSelected: article
+    @State var currentUpperIndex: Int
+    @State var currentLowerIndex: Int
+    @State var currentFormalUpperIndex = 0
+    @State var currentInformalUpperIndex = 0
+    @State var currentFormalLowerIndex = 0
+    @State var currentInformalLowerIndex = 0
     
     var body: some View {
         VStack {
-            UpperSwipeView(items: uppers ?? [], articleSelected: upperSelected, currentPage: currentUpperIndex)
+            UpperSwipeView(items: uppers ?? [], articleSelected: upperSelected, currentPage: $currentUpperIndex)
                 .padding(.bottom, 10)
             
-            LowerSwipeView(items: lowers ?? [], articleSelected: lowerSelected, currentPage: currentLowerIndex)
+            LowerSwipeView(items: lowers ?? [], articleSelected: lowerSelected, currentPage: $currentLowerIndex)
                 .padding(.bottom, 10)
             
             VStack(alignment: .leading) {
@@ -78,14 +85,61 @@ struct ChooseAnOutfit: View {
                         .imageScale(.large)
                         .padding(.horizontal, 10)
                     Toggle("Formal Event", isOn: $vestiti_eleganti)
+                        .onChange(of: vestiti_eleganti) { updateArticles() }
                 }
             }
             .padding()
         }
+        .onAppear() { initializeArticles() }
         .navigationTitle("")
+    }
+    
+    func initializeArticles() {
+        
+        let uppersUnfiltered = typeFilter(from: catalogo, type: "top")
+        let uppersUnfiltered2 = genderFilter(from: uppersUnfiltered ?? [], gender: "man")
+
+        let lowersUnfiltered = typeFilter(from: catalogo, type: "bottom")
+        let lowersUnfiltered2 = genderFilter(from: lowersUnfiltered ?? [], gender: "man")
+        
+        if vestiti_eleganti == true {
+            uppers = eleganceFilter(from: uppersUnfiltered2 ?? [], elegance: "informal")
+            lowers = eleganceFilter(from: lowersUnfiltered2 ?? [], elegance: "informal")
+        } else {
+            uppers = eleganceFilter(from: uppersUnfiltered2 ?? [], elegance: "formal")
+            lowers = eleganceFilter(from: lowersUnfiltered2 ?? [], elegance: "formal")
+        }
+        
+    }
+    
+    func updateArticles() {
+        
+        let uppersUnfiltered = typeFilter(from: catalogo, type: "top")
+        let uppersUnfiltered2 = genderFilter(from: uppersUnfiltered ?? [], gender: "man")
+
+        let lowersUnfiltered = typeFilter(from: catalogo, type: "bottom")
+        let lowersUnfiltered2 = genderFilter(from: lowersUnfiltered ?? [], gender: "man")
+        
+        if vestiti_eleganti == true {
+            uppers = eleganceFilter(from: uppersUnfiltered2 ?? [], elegance: "informal")
+            lowers = eleganceFilter(from: lowersUnfiltered2 ?? [], elegance: "informal")
+            
+            currentUpperIndex = currentInformalUpperIndex
+            currentLowerIndex = currentInformalLowerIndex
+            currentFormalUpperIndex = currentUpperIndex
+            currentFormalLowerIndex = currentLowerIndex
+        } else {
+            uppers = eleganceFilter(from: uppersUnfiltered2 ?? [], elegance: "formal")
+            lowers = eleganceFilter(from: lowersUnfiltered2 ?? [], elegance: "formal")
+            
+            currentUpperIndex = currentFormalUpperIndex
+            currentLowerIndex = currentFormalLowerIndex
+            currentInformalUpperIndex = currentUpperIndex
+            currentInformalLowerIndex = currentLowerIndex
+        }
     }
 }
 
 /*#Preview {
-    ChooseAnOutfit()
+    LowerSwipeView(items: lowers ?? [], articleSelected: lowers[0] ?? [], currentPage: 0)
 }*/

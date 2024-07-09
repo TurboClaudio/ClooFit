@@ -9,25 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var selectedTab = 1
+    @State private var selectedTab = 0
     
     var body: some View {
         TabView(selection: $selectedTab) {
-           Palette()
-                .tabItem {
-                    Label("Colors", systemImage: "rays")
-                        .tag(0)
-                }
             HomePage()
                 .tabItem {
-                    Label("Home", systemImage: "house")
+                    Label("Outfits", systemImage: "tshirt.fill")
                 }
-                .tag(1)
+                .tag(0)
             ItemListView(filteredList: closet)
                 .tabItem {
                     Label("Closet", systemImage: "tag")
                 }
-                .tag(2)
+                .tag(1)
+            Palette()
+                .tabItem {
+                    Label("Colors", systemImage: "rays")
+                        .tag(2)
+                }
         }
     }
 }

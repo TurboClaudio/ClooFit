@@ -46,6 +46,16 @@ func typeFilter(from array: [article], type: String) -> [article]? {
     return subarray
 }
 
+/*func typeFilter(from array: [article], type: String) -> [article]? {
+    var subarray: [article] = []
+    for fit in array {
+        if fit.type == type {
+            subarray.append(fit)
+        }
+    }
+    return subarray
+}*/
+
 // passa array article e filtra per eleganza passata (informal or formal)
 func eleganceFilter(from array: [article], elegance: String) -> [article]? {
     let subarray: [article] = array.filter{ $0.elegance == elegance}
