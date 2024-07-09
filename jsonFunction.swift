@@ -42,46 +42,30 @@ func salvaUtente(){
 
 // passa array article e filtra per tipo passato (top or bottom or topbottom)
 func typeFilter(from array: [article], type: String) -> [article]? {
-    var subarray: [article] = []
-    for articolo in array{
-        if(articolo.type == type){
-            subarray.append(articolo)
-        }
-    }
+    var subarray: [article] = array.filter{ $0.type == type}
     return subarray
 }
 
 // passa array article e filtra per eleganza passata (informal or formal)
 func eleganceFilter(from array: [article], elegance: String) -> [article]? {
-    var subarray: [article] = []
-    for articolo in array{
-        if(articolo.elegance == elegance){
-            subarray.append(articolo)
-        }
-    }
+    var subarray: [article] = array.filter{ $0.elegance == elegance}
     return subarray
 }
 
 // passa array article e filtra per genere passata (man or woman or unisex) quelli unisex vengono sempre presi
 func genderFilter(from array: [article], gender: String) -> [article]? {
-    var subarray: [article] = []
-    for articolo in array{
-        if( articolo.gender == "unisex" || articolo.gender == gender){
-            subarray.append(articolo)
-        }
-    }
+    var subarray: [article] = array.filter{ $0.gender == gender}
+    return subarray
+}
+
+func weatherFilter(from array: [article], weather: String) -> [article]? {
+    var subarray: [article] = array.filter{ $0.weather == weather}
     return subarray
 }
 
 //cerca per id
-func cercaCapo(id: String)->article{
-    var ris: article = catalogo[0]
-    for scor in catalogo{
-        if scor.id == id{
-            ris = scor
-            break
-        }
-    }
+func cercaCapo(array:[article], id: String)-> article?{
+    var ris: article? = array.first{$0.id == id}
     return ris
 }
 
