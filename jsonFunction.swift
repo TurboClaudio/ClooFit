@@ -54,7 +54,7 @@ func eleganceFilter(from array: [article], elegance: String) -> [article]? {
 
 // passa array article e filtra per genere passata (man or woman or unisex) quelli unisex vengono sempre presi
 func genderFilter(from array: [article], gender: String) -> [article]? {
-    var subarray: [article] = array.filter{ $0.gender == gender}
+    var subarray: [article] = array.filter{$0.gender == "unisex" || $0.gender == gender}
     return subarray
 }
 
