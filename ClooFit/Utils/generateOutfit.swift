@@ -10,7 +10,7 @@ import Foundation
 func generateOutfit(array:[article], weather: String, gender: String, elegance: String) -> Outfit{
     var upper: article
     var lower: article
-    var subArray: [article] = weatherFilter(from: genderFilter(from: eleganceFilter(from: typeFilter(from: array, type: "top") ?? catalogo, elegance: elegance) ?? catalogo, gender: gender) ?? catalogo, weather: weather) ?? catalogo
+    var subArray: [article] = weatherFilter(from: genderFilter(from: eleganceFilter(from: typeFilter(from: array, type: "top") ?? array , elegance: elegance) ?? array , gender: gender) ?? array , weather: weather) ?? array
     upper = subArray.randomElement() ?? catalogo[0]
     subArray = weatherFilter(from: genderFilter(from: eleganceFilter(from: typeFilter(from: array, type: "bottom") ?? catalogo, elegance: elegance) ?? catalogo, gender: gender) ?? catalogo, weather: weather) ?? catalogo
     repeat{
