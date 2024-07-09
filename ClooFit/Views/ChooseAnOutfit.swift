@@ -9,8 +9,8 @@ import SwiftUI
 
 struct UpperSwipeView: View {
     var items: [article]
-    @State private var currentPage = 0
-    
+    var articleSelected: article
+    @State var currentPage: Int
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $currentPage) {
@@ -28,15 +28,10 @@ struct UpperSwipeView: View {
     }
 }
 
-struct UpperSwipeView_Previews: PreviewProvider {
-    static var previews: some View {
-        UpperSwipeView(items: uppers)
-    }
-}
-
 struct LowerSwipeView: View {
     var items: [article]
-    @State private var currentPage = 0
+    var articleSelected: article
+    @State var currentPage: Int
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -56,22 +51,20 @@ struct LowerSwipeView: View {
     }
 }
 
-struct LowerSwipeView_Previews: PreviewProvider {
-    static var previews: some View {
-        LowerSwipeView(items: lowers)
-    }
-}
-
 struct ChooseAnOutfit: View {
     @State private var vestiti_eleganti = false
+    var upperSelected: article
+    var lowerSelected: article
+    var currentUpperIndex: Int
+    var currentLowerIndex: Int
     
     var body: some View {
         VStack {
-            UpperSwipeView(items: uppers)
+            UpperSwipeView(items: uppers ?? [], articleSelected: upperSelected, currentPage: currentUpperIndex)
                 .padding(.bottom, 10)
             
-            LowerSwipeView(items: lowers)
-                .padding(.bottom, 10)    
+            LowerSwipeView(items: lowers ?? [], articleSelected: lowerSelected, currentPage: currentLowerIndex)
+                .padding(.bottom, 10)
             
             VStack(alignment: .leading) {
                 HStack {
@@ -93,13 +86,6 @@ struct ChooseAnOutfit: View {
     }
 }
 
-struct ChooseAnOutfit_Previews: PreviewProvider {
-    static var previews: some View {
-        ChooseAnOutfit()
-    }
-}
-
-
-#Preview {
+/*#Preview {
     ChooseAnOutfit()
-}
+}*/

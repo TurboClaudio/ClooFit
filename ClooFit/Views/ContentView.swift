@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var selectedTab = 1  // Set the initial tab to 1 (HomePage)
+    @State private var selectedTab = 1
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -23,7 +23,7 @@ struct ContentView: View {
                     Label("Home", systemImage: "house")
                 }
                 .tag(1)
-            Text("Closet")
+            ItemListView(filteredList: closet)
                 .tabItem {
                     Label("Closet", systemImage: "tag")
                 }

@@ -69,6 +69,17 @@ func cercaCapo(array:[article], id: String)-> article?{
     return ris
 }
 
+func getIndexCapo(array:[article], id: String)-> Int{
+    var count = 0
+    for fit in array {
+        if (fit.id == id){
+            return count
+        }
+        count += 1
+    }
+    return -1
+}
+
 
 //vede se è abbinabile il colore (semplicemnte vedendo se è un suo complemntare più o meno)
 //da usare con cura
