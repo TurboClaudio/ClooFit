@@ -1,1 +1,12 @@
-
+{
+    "age" : "0"
+    "gender": "unisex"
+    "eyeColor": nil
+    "eyeColorRGB": nil
+    "hairColor": nil
+    "hairColorRGB": nil
+    "skinColor": nil
+    "skinColorRGB2": nil
+    "stagione": 0
+    "isTest": "false"
+}

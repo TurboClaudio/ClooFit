@@ -6,17 +6,17 @@
 //
 
 import Foundation
-
+var user: Utente = load("sats.json")
 
 struct Utente: Codable{
     var age: Int
     var gender: String
-    var eyeColor: String
-    var eyeColorRGB: colorRGB
-    var hairColor: String
-    var hairColorRGB: colorRGB
-    var skinColor: String
-    var skinColorRGB: colorRGB
+    var eyeColor: String?
+    var eyeColorRGB: colorRGB?
+    var hairColor: String?
+    var hairColorRGB: colorRGB?
+    var skinColor: String?
+    var skinColorRGB: colorRGB?
     var stagione: Int?
     var isTest: Bool
 }
