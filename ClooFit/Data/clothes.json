@@ -795,7 +795,137 @@
         "type" : "bottom",
         "elegance" : "formal",
         "weather" : "cold"
+    },
+    
+    {
+        "id": "SO50",
+        "gender": "woman",
+        "name": "tank top",
+        "material": "cotton",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 237,
+            "g" : 237,
+            "b" : 237
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO51",
+        "gender": "woman",
+        "name": "short skirt",
+        "material": "silk",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 20,
+            "g" : 20,
+            "b" : 20
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO52",
+        "gender": "woman",
+        "name": "short skirt",
+        "material": "silk",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 220,
+            "g" : 220,
+            "b" : 220
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO53",
+        "gender": "woman",
+        "name": "pants",
+        "material": "silk",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 44,
+            "g" : 44,
+            "b" : 40
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO54",
+        "gender": "woman",
+        "name": "pants",
+        "material": "silk",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 222,
+            "g" : 220,
+            "b" : 210
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO55",
+        "gender": "woman",
+        "name": "pants",
+        "material": "silk",
+        "mainColor": "beige",
+        "mainColorRGB" : {
+            "r" : 236,
+            "g" : 223,
+            "b" : 186
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO56",
+        "gender": "woman",
+        "name": "pants",
+        "material": "silk",
+        "mainColor": "red",
+        "mainColorRGB" : {
+            "r" : 180,
+            "g" : 70,
+            "b" : 64
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO57",
+        "gender": "woman",
+        "name": "pants",
+        "material": "silk",
+        "mainColor": "blue",
+        "mainColorRGB" : {
+            "r" : 68,
+            "g" : 94,
+            "b" : 121
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
     }
+    
+    
     
     
 ]
