@@ -923,6 +923,86 @@
         "type" : "bottom",
         "elegance" : "formal",
         "weather" : "cold"
+    },
+    
+    {
+        "id": "SO58",
+        "gender": "man",
+        "name": "cargo",
+        "material": "cotton",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 40,
+            "g" : 40,
+            "b" : 40
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO59",
+        "gender": "man",
+        "name": "cargo",
+        "material": "cotton",
+        "mainColor": "grey",
+        "mainColorRGB" : {
+            "r" : 98,
+            "g" : 98,
+            "b" : 98
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO60",
+        "gender": "man",
+        "name": "cargo",
+        "material": "cotton",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 205,
+            "g" : 205,
+            "b" : 205
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO61",
+        "gender": "man",
+        "name": "cargo",
+        "material": "cotton",
+        "mainColor": "blue",
+        "mainColorRGB" : {
+            "r" : 52,
+            "g" : 70,
+            "b" : 93
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO62",
+        "gender": "man",
+        "name": "cargo",
+        "material": "cotton",
+        "mainColor": "military green",
+        "mainColorRGB" : {
+            "r" : 109,
+            "g" : 101,
+            "b" : 77
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
     }
     
     
