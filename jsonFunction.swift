@@ -6,7 +6,6 @@
 //
 
 import Foundation
-var users: [Utente] = load("Utente.json")
 
 
 //salva l'utente in un file json
@@ -18,12 +17,12 @@ func salvaUtente(){
         encoder.outputFormatting = .prettyPrinted
         
         // Codifica l'array di utenti in dati JSON
-        let jsonData = try encoder.encode(users)
+        let jsonData = try encoder.encode(user)
         
         // Ottieni il percorso della directory dei documenti
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             // Crea il percorso completo del file
-            let jsonFilePath = documentDirectory.appendingPathComponent("Utente.json")
+            let jsonFilePath = documentDirectory.appendingPathComponent("stats.json")
             
             // Scrivi i dati JSON nel file
             try jsonData.write(to: jsonFilePath)
