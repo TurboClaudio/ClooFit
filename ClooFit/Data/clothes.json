@@ -1003,6 +1003,86 @@
         "type" : "bottom",
         "elegance" : "informal",
         "weather" : "cold"
+    },
+    
+    {
+        "id": "SO63",
+        "gender": "man",
+        "name": "tracksuit",
+        "material": "cotton",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 41,
+            "g" : 41,
+            "b" : 41
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO64",
+        "gender": "man",
+        "name": "tracksuit",
+        "material": "cotton",
+        "mainColor": "grey",
+        "mainColorRGB" : {
+            "r" : 105,
+            "g" : 105,
+            "b" : 105
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO65",
+        "gender": "man",
+        "name": "tracksuit",
+        "material": "cotton",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 225,
+            "g" : 225,
+            "b" : 225
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO66",
+        "gender": "man",
+        "name": "tracksuit",
+        "material": "cotton",
+        "mainColor": "blue",
+        "mainColorRGB" : {
+            "r" : 31,
+            "g" : 47,
+            "b" : 69
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO67",
+        "gender": "man",
+        "name": "tracksuit",
+        "material": "cotton",
+        "mainColor": "green",
+        "mainColorRGB" : {
+            "r" : 78,
+            "g" : 103,
+            "b" : 90
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
     }
     
     
