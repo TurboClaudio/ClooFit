@@ -8,7 +8,7 @@
 import Foundation
 
 
-func caricaEUppdateUtenteDaFile() -> Utente? {
+/*func caricaEUppdateUtenteDaFile() -> Utente? {
     do {
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             let jsonFilePath = documentDirectory.appendingPathComponent("utente.json")
@@ -32,11 +32,30 @@ func caricaEUppdateUtenteDaFile() -> Utente? {
         print("Errore durante il caricamento o aggiornamento del file JSON: \(error.localizedDescription)")
     }
     return nil
-}
+}*/
 
 /*let eyeColors = ["Brown", "Blue", "Green"]
 let hairColors = ["Black", "Brown", "Blonde", "Red", "Gray", "Bald"]
 let skinColors = ["Skin Color 1", "Skin Color 2", "Skin Color 3"]*/
+
+func caricaEUpdateStagioneDaFile() -> Int? {
+    do {
+        if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let jsonFilePath = documentDirectory.appendingPathComponent("utente.json")
+            let jsonData = try Data(contentsOf: jsonFilePath)
+            let decoder = JSONDecoder()
+            let utente = try decoder.decode(Utente.self, from: jsonData)
+            
+            // Determina la stagione
+            let stagione = getStagione(occhi: utente.eyeColor, capelli: utente.hairColor, pelle: utente.skinColor)
+            
+            return stagione
+        }
+    } catch {
+        print("Errore durante il caricamento o aggiornamento del file JSON: \(error.localizedDescription)")
+    }
+    return nil
+}
 
 
 func getStagione(occhi: String, capelli: String, pelle: String) -> Int {

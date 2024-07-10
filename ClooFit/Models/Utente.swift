@@ -9,7 +9,7 @@ import Foundation
 var user: Utente = load("sats.json")
 
 struct Utente: Codable{
-    var age: Int
+    var age: String
     var gender: String
     var eyeColor: String?
     var eyeColorRGB: colorRGB?
