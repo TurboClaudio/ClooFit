@@ -9,7 +9,7 @@ import Foundation
 
 
 struct Utente: Codable{
-    var age: Int
+    var age: String
     var gender: String
     var eyeColor: String
     var eyeColorRGB: colorRGB
