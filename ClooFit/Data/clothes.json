@@ -1007,7 +1007,7 @@
     
     {
         "id": "SO63",
-        "gender": "man",
+        "gender": "unisex",
         "name": "tracksuit",
         "material": "cotton",
         "mainColor": "black",
@@ -1023,7 +1023,7 @@
     
     {
         "id": "SO64",
-        "gender": "man",
+        "gender": "unisex",
         "name": "tracksuit",
         "material": "cotton",
         "mainColor": "grey",
@@ -1039,7 +1039,7 @@
     
     {
         "id": "SO65",
-        "gender": "man",
+        "gender": "unisex",
         "name": "tracksuit",
         "material": "cotton",
         "mainColor": "white",
@@ -1055,7 +1055,7 @@
     
     {
         "id": "SO66",
-        "gender": "man",
+        "gender": "unisex",
         "name": "tracksuit",
         "material": "cotton",
         "mainColor": "blue",
@@ -1071,7 +1071,7 @@
     
     {
         "id": "SO67",
-        "gender": "man",
+        "gender": "unisex",
         "name": "tracksuit",
         "material": "cotton",
         "mainColor": "green",

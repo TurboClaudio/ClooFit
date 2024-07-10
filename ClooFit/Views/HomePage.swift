@@ -17,7 +17,7 @@ var lowers = eleganceFilter(from: lowersUnfiltered2 ?? [], elegance: "informal")
 
 struct HomePage: View {
     
-    @State var outfits = [generateOutfit(array: catalogo, weather: "cold", gender: "unisex", elegance: "informal"), generateOutfit(array: catalogo, weather: "cold", gender: "unisex", elegance: "informal")]
+    @State var outfits = [generateOutfit(array: catalogo, weather: "cold", gender: "man", elegance: "informal"), generateOutfit(array: catalogo, weather: "cold", gender: "man", elegance: "informal")]
     
     @State var defaultOutfit = Outfit(upper: catalogo[2], lower: catalogo[26])
     
