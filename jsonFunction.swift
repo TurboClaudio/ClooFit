@@ -42,47 +42,52 @@ func salvaUtente(){
 
 // passa array article e filtra per tipo passato (top or bottom or topbottom)
 func typeFilter(from array: [article], type: String) -> [article]? {
-    var subarray: [article] = []
-    for articolo in array{
-        if(articolo.type == type){
-            subarray.append(articolo)
-        }
-    }
+    let subarray: [article] = array.filter{ $0.type == type}
     return subarray
 }
 
-// passa array article e filtra per eleganza passata (informal or formal)
-func eleganceFilter(from array: [article], elegance: String) -> [article]? {
+/*func typeFilter(from array: [article], type: String) -> [article]? {
     var subarray: [article] = []
-    for articolo in array{
-        if(articolo.elegance == elegance){
-            subarray.append(articolo)
+    for fit in array {
+        if fit.type == type {
+            subarray.append(fit)
         }
     }
+    return subarray
+}*/
+
+// passa array article e filtra per eleganza passata (informal or formal)
+func eleganceFilter(from array: [article], elegance: String) -> [article]? {
+    let subarray: [article] = array.filter{ $0.elegance == elegance}
     return subarray
 }
 
 // passa array article e filtra per genere passata (man or woman or unisex) quelli unisex vengono sempre presi
 func genderFilter(from array: [article], gender: String) -> [article]? {
-    var subarray: [article] = []
-    for articolo in array{
-        if( articolo.gender == "unisex" || articolo.gender == gender){
-            subarray.append(articolo)
-        }
-    }
+    let subarray: [article] = array.filter{$0.gender == "unisex" || $0.gender == gender}
+    return subarray
+}
+
+func weatherFilter(from array: [article], weather: String) -> [article]? {
+    let subarray: [article] = array.filter{ $0.weather == weather}
     return subarray
 }
 
 //cerca per id
-func cercaCapo(id: String)->article{
-    var ris: article = catalogo[0]
-    for scor in catalogo{
-        if scor.id == id{
-            ris = scor
-            break
-        }
-    }
+func cercaCapo(array:[article], id: String)-> article?{
+    let ris: article? = array.first{$0.id == id}
     return ris
+}
+
+func getIndexCapo(array:[article], id: String)-> Int{
+    var count = 0
+    for fit in array {
+        if (fit.id == id){
+            return count
+        }
+        count += 1
+    }
+    return -1
 }
 
 
@@ -105,6 +110,33 @@ func areColorsHarmonious(upper: article, lower: article) -> Bool {
     
     // se è nero o bianco è compatibile
     if upper.mainColorRGB.l <= 0.1 || upper.mainColorRGB.l >= 0.9 || lower.mainColorRGB.l <= 0.1 || lower.mainColorRGB.l >= 0.9{
+        ris = true
+    }else{
+        // altrimenti vedi se è più o meno un complementare facendo caso anche alla luminosità e alla saturazione
+        isComplementary = hueDifference < 20 || hueDifference > 340
+        ris = isComplementary && isSaturationSimilar && isLightnessSimilar
+    }
+
+    return ris
+}
+
+func areColorsSimilar(color1: colorRGB, color2: colorRGB) -> Bool {
+    var isComplementary: Bool
+    var ris: Bool
+    // Calcolare la tonalità complementare del primo colore
+    //let complementaryHue = (color1.h + 180).truncatingRemainder(dividingBy: 360)
+    // Controllare se la differenza di tonalità è vicina a 180 gradi
+    let hueDifference = abs(color1.h - color2.h)
+    
+    let saturationDifference = abs(color1.s - color2.s)
+    let isSaturationSimilar = saturationDifference < 0.3
+        
+        // Controllare se la luminosità è simile (entro un certo range)
+    let lightnessDifference = abs(color1.l - color2.l)
+    let isLightnessSimilar = lightnessDifference < 0.3
+    
+    // se è nero o bianco è compatibile
+    if color1.l <= 0.1 || color1.l >= 0.9 || color2.l <= 0.1 || color2.l >= 0.9{
         ris = true
     }else{
         // altrimenti vedi se è più o meno un complementare facendo caso anche alla luminosità e alla saturazione

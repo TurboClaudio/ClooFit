@@ -1,6 +1,6 @@
 [
     {
-        "id": "SO00",
+        "id": "SO00U",
         "gender": "",
         "name": "",
         "material": "",
@@ -10,7 +10,23 @@
             "g" : 0,
             "b" : 0
         },
-        "type" : "",
+        "type" : "topDefault",
+        "elegance" : "",
+        "weather" : ""
+    },
+    
+    {
+        "id": "SO00L",
+        "gender": "",
+        "name": "",
+        "material": "",
+        "mainColor": "",
+        "mainColorRGB" : {
+            "r" : 0,
+            "g" : 0,
+            "b" : 0
+        },
+        "type" : "bottomDefault",
         "elegance" : "",
         "weather" : ""
     },
@@ -345,7 +361,7 @@
             "b" : 30
         },
         "type" : "top",
-        "elegance" : "informal",
+        "elegance" : "formal",
         "weather" : "hot"
     },
     
@@ -361,7 +377,7 @@
             "b" : 160
         },
         "type" : "top",
-        "elegance" : "informal",
+        "elegance" : "formal",
         "weather" : "hot"
     },
     
@@ -377,14 +393,14 @@
             "b" : 220
         },
         "type" : "top",
-        "elegance" : "informal",
+        "elegance" : "formal",
         "weather" : "hot"
     },
     
     {
         "id": "SO25",
         "gender": "man",
-        "name": "long sleeves polo shirt",
+        "name": "polo shirt",
         "material": "cotton",
         "mainColor": "dark blue",
         "mainColorRGB" : {
@@ -393,14 +409,14 @@
             "b" : 60
         },
         "type" : "top",
-        "elegance" : "informal",
+        "elegance" : "formal",
         "weather" : "hot"
     },
     
     {
         "id": "SO26",
         "gender": "man",
-        "name": "long sleeves polo shirt",
+        "name": "polo shirt",
         "material": "cotton",
         "mainColor": "light brown",
         "mainColorRGB" : {
@@ -409,7 +425,7 @@
             "b" : 170
         },
         "type" : "top",
-        "elegance" : "informal",
+        "elegance" : "formal",
         "weather" : "hot"
     },
     
@@ -482,7 +498,7 @@
         "gender": "man",
         "name": "pants",
         "material": "silk",
-        "mainColor": "blue",
+        "mainColor": "light blue",
         "mainColorRGB" : {
             "r" : 64,
             "g" : 80,
@@ -500,9 +516,9 @@
         "material": "jeans",
         "mainColor": "blue",
         "mainColorRGB" : {
-            "r" : 55,
-            "g" : 61,
-            "b" : 78
+            "r" : 76,
+            "g" : 86,
+            "b" : 99
         },
         "type" : "bottom",
         "elegance" : "informal",
@@ -594,7 +610,7 @@
         "gender": "unisex",
         "name": "hoodie",
         "material": "wool",
-        "mainColor": "",
+        "mainColor": "red",
         "mainColorRGB" : {
             "r" : 190,
             "g" : 60,
@@ -621,7 +637,165 @@
         "weather" : "cold"
     },
     
+    {
+        "id": "SO40",
+        "gender": "man",
+        "name": "pants",
+        "material": "silk",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 238,
+            "g" : 238,
+            "b" : 238
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
+    },
     
+    {
+        "id": "SO41",
+        "gender": "man",
+        "name": "ripped jeans",
+        "material": "jeans",
+        "mainColor": "blue",
+        "mainColorRGB" : {
+            "r" : 77,
+            "g" : 99,
+            "b" : 126
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO42",
+        "gender": "woman",
+        "name": "tank top",
+        "material": "cotton",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 20,
+            "g" : 23,
+            "b" : 33
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO43",
+        "gender": "woman",
+        "name": "tank top",
+        "material": "cotton",
+        "mainColor": "red",
+        "mainColorRGB" : {
+            "r" : 90,
+            "g" : 40,
+            "b" : 40
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO44",
+        "gender": "woman",
+        "name": "tank top",
+        "material": "cotton",
+        "mainColor": "yellow",
+        "mainColorRGB" : {
+            "r" : 136,
+            "g" : 105,
+            "b" : 46
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO45",
+        "gender": "woman",
+        "name": "tank top",
+        "material": "cotton",
+        "mainColor": "dark blue",
+        "mainColorRGB" : {
+            "r" : 33,
+            "g" : 41,
+            "b" : 59
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO46",
+        "gender": "woman",
+        "name": "tank top",
+        "material": "cotton",
+        "mainColor": "light blue",
+        "mainColorRGB" : {
+            "r" : 194,
+            "g" : 212,
+            "b" : 223
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO47",
+        "gender": "woman",
+        "name": "tank top",
+        "material": "cotton",
+        "mainColor": "green",
+        "mainColorRGB" : {
+            "r" : 55,
+            "g" : 69,
+            "b" : 44
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO48",
+        "gender": "woman",
+        "name": "long skirt",
+        "material": "silk",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 24,
+            "g" : 23,
+            "b" : 28
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO49",
+        "gender": "woman",
+        "name": "long skirt",
+        "material": "silk",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 233,
+            "g" : 233,
+            "b" : 233
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
+    }
     
     
 ]
