@@ -17,7 +17,8 @@ var lowers = eleganceFilter(from: lowersUnfiltered2 ?? [], elegance: "informal")
 
 struct HomePage: View {
     
-    @State var outfits = [generateOutfit(array: catalogo, weather: "cold", gender: "man", elegance: "informal"), generateOutfit(array: catalogo, weather: "cold", gender: "man", elegance: "informal")]
+    @State var informalOutfits = [generateOutfit(array: catalogo, weather: "cold", gender: "unisex", elegance: "informal"), generateOutfit(array: catalogo, weather: "cold", gender: "unisex", elegance: "informal")]
+    @State var formalOutfits = [generateOutfit(array: catalogo, weather: "cold", gender: "unisex", elegance: "formal"), generateOutfit(array: catalogo, weather: "cold", gender: "unisex", elegance: "formal")]
     
     @State var defaultOutfit = Outfit(upper: catalogo[2], lower: catalogo[26])
     
@@ -32,8 +33,17 @@ struct HomePage: View {
                             .shadow(radius: 5)
                             .padding(.horizontal, 20)
                     }
-                    ForEach(outfits) { outfit in
+                    ForEach(informalOutfits) { outfit in
                         NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: false, upperSelected: outfit.upper, lowerSelected: outfit.lower, currentUpperIndex: getIndexCapo(array: uppers ?? [], id: outfit.upper.id), currentLowerIndex: getIndexCapo(array: lowers ?? [], id: outfit.lower.id))) {
+                            SuggestionRow(outfit: outfit)
+                                .background(Color(red: (245.0 / 255.0), green: (245.0 / 255.0), blue: (247.0/255.0)))
+                                .cornerRadius(10)
+                                .shadow(radius: 5)
+                                .padding(.horizontal, 20)
+                        }
+                    }
+                    ForEach(formalOutfits) { outfit in
+                        NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: true, upperSelected: outfit.upper, lowerSelected: outfit.lower, currentUpperIndex: getIndexCapo(array: uppers ?? [], id: outfit.upper.id), currentLowerIndex: getIndexCapo(array: lowers ?? [], id: outfit.lower.id))) {
                             SuggestionRow(outfit: outfit)
                                 .background(Color(red: (245.0 / 255.0), green: (245.0 / 255.0), blue: (247.0/255.0)))
                                 .cornerRadius(10)
