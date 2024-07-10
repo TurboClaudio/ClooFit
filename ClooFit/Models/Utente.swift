@@ -17,8 +17,6 @@ struct Utente: Codable{
     var hairColorRGB: colorRGB
     var skinColor: String
     var skinColorRGB: colorRGB
-    /*var stagione: Int{
-        return getStagione()
-    }*/
+    var stagione: Int?
     var isTest: Bool
 }
