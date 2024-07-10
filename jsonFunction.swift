@@ -46,6 +46,16 @@ func typeFilter(from array: [article], type: String) -> [article]? {
     return subarray
 }
 
+/*func typeFilter(from array: [article], type: String) -> [article]? {
+    var subarray: [article] = []
+    for fit in array {
+        if fit.type == type {
+            subarray.append(fit)
+        }
+    }
+    return subarray
+}*/
+
 // passa array article e filtra per eleganza passata (informal or formal)
 func eleganceFilter(from array: [article], elegance: String) -> [article]? {
     let subarray: [article] = array.filter{ $0.elegance == elegance}
@@ -67,6 +77,17 @@ func weatherFilter(from array: [article], weather: String) -> [article]? {
 func cercaCapo(array:[article], id: String)-> article?{
     let ris: article? = array.first{$0.id == id}
     return ris
+}
+
+func getIndexCapo(array:[article], id: String)-> Int{
+    var count = 0
+    for fit in array {
+        if (fit.id == id){
+            return count
+        }
+        count += 1
+    }
+    return -1
 }
 
 

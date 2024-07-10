@@ -31,6 +31,7 @@
 		C68F04E92C36C95A00621532 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04E72C36C95A00621532 /* HomePage.swift */; };
 		C68F04EA2C36C95A00621532 /* SuggestionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04E82C36C95A00621532 /* SuggestionRow.swift */; };
 		C68F04EF2C36C96B00621532 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04EC2C36C96A00621532 /* Outfit.swift */; };
+		C68F04FC2C3D88BF00621532 /* NewOutfitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04FB2C3D88BF00621532 /* NewOutfitRow.swift */; };
 		C69C699E2C2ECB5C00FE4305 /* ClooFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69C699D2C2ECB5C00FE4305 /* ClooFitApp.swift */; };
 		C69C69A02C2ECB5C00FE4305 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69C699F2C2ECB5C00FE4305 /* ContentView.swift */; };
 		C69C69A22C2ECB5D00FE4305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69C69A12C2ECB5D00FE4305 /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		C68F04E72C36C95A00621532 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		C68F04E82C36C95A00621532 /* SuggestionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SuggestionRow.swift; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 1; };
 		C68F04EC2C36C96A00621532 /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
+		C68F04FB2C3D88BF00621532 /* NewOutfitRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOutfitRow.swift; sourceTree = "<group>"; };
 		C69C699A2C2ECB5C00FE4305 /* ClooFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClooFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69C699D2C2ECB5C00FE4305 /* ClooFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClooFitApp.swift; sourceTree = "<group>"; };
 		C69C699F2C2ECB5C00FE4305 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				5CDAF1F92C3C3BB100F3618C /* ClosetView */,
 				A716DF702C39467900CCA571 /* Palette.swift */,
 				C68F04E72C36C95A00621532 /* HomePage.swift */,
+				C68F04FB2C3D88BF00621532 /* NewOutfitRow.swift */,
 				C68F04E82C36C95A00621532 /* SuggestionRow.swift */,
 				C69C699F2C2ECB5C00FE4305 /* ContentView.swift */,
 				E83858782C382E870074F42B /* ChooseAnOutfit.swift */,
@@ -411,6 +414,7 @@
 				4F1830032C3828D9001F8EC8 /* Utente.swift in Sources */,
 				4F1830012C37FB67001F8EC8 /* articolo.swift in Sources */,
 				E83858792C382E870074F42B /* ChooseAnOutfit.swift in Sources */,
+				C68F04FC2C3D88BF00621532 /* NewOutfitRow.swift in Sources */,
 				4F1830132C3D12D6001F8EC8 /* generateOutfit.swift in Sources */,
 				5CDAF1FD2C3C3BE200F3618C /* ItemViewDetail.swift in Sources */,
 				4F182FFF2C37F919001F8EC8 /* ModelData.swift in Sources */,
