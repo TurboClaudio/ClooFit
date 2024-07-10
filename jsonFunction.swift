@@ -98,3 +98,30 @@ func areColorsHarmonious(upper: article, lower: article) -> Bool {
 
     return ris
 }
+
+func areColorsSimilar(color1: colorRGB, color2: colorRGB) -> Bool {
+    var isComplementary: Bool
+    var ris: Bool
+    // Calcolare la tonalità complementare del primo colore
+    //let complementaryHue = (color1.h + 180).truncatingRemainder(dividingBy: 360)
+    // Controllare se la differenza di tonalità è vicina a 180 gradi
+    let hueDifference = abs(color1.h - color2.h)
+    
+    let saturationDifference = abs(color1.s - color2.s)
+    let isSaturationSimilar = saturationDifference < 0.3
+        
+        // Controllare se la luminosità è simile (entro un certo range)
+    let lightnessDifference = abs(color1.l - color2.l)
+    let isLightnessSimilar = lightnessDifference < 0.3
+    
+    // se è nero o bianco è compatibile
+    if color1.l <= 0.1 || color1.l >= 0.9 || color2.l <= 0.1 || color2.l >= 0.9{
+        ris = true
+    }else{
+        // altrimenti vedi se è più o meno un complementare facendo caso anche alla luminosità e alla saturazione
+        isComplementary = hueDifference < 20 || hueDifference > 340
+        ris = isComplementary && isSaturationSimilar && isLightnessSimilar
+    }
+
+    return ris
+}
