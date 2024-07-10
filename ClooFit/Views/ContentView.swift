@@ -18,7 +18,8 @@ struct ContentView: View {
                     Label("Outfits", systemImage: "tshirt.fill")
                 }
                 .tag(0)
-            ItemListView(filteredList: closet)
+            //ItemListView(filteredList: closet)
+            ClosetView()
                 .tabItem {
                     Label("Closet", systemImage: "tag")
                 }

@@ -74,19 +74,35 @@ struct ChooseAnOutfit: View {
                 .padding(.bottom, 10)
             
             VStack(alignment: .leading) {
-                HStack {
+                /*HStack {
                     Image(systemName: "cloud")
                         .imageScale(.large)
                         .padding(.horizontal, 10)
                     Text("Maybe it's raining...")
-                }
+                }*/
+                MeteoView()
+                    .offset(y: -20)
+                /*
                 HStack {
                     Image(systemName: "puzzlepiece.extension.fill")
                         .imageScale(.large)
-                        .padding(.horizontal, 10)
+                        // .padding(.horizontal, 10)
                     Toggle("Formal Event", isOn: $vestiti_eleganti)
                         .onChange(of: vestiti_eleganti) { updateArticles() }
+                }*/
+                HStack {
+                    Image(systemName: "puzzlepiece.extension.fill")
+                    Text("Formal Event") // La label
+                        .offset(x: 5)
+                    Spacer()
+                    Toggle("Formal Event", isOn: $vestiti_eleganti)
+                        .labelsHidden()
+                        .onChange(of: vestiti_eleganti) { updateArticles() }
+                        .padding(.leading, -20)
+                        .offset(x: -10)
                 }
+                .offset(y: -20)
+                
             }
             .padding()
         }
