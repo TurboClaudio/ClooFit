@@ -8,25 +8,25 @@
 import Foundation
 
 
-/*func caricaEUppdateUtenteDaFile() -> Utente? {
+/*func caricaEUppdateuserDaFile() -> user? {
     do {
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let jsonFilePath = documentDirectory.appendingPathComponent("utente.json")
+            let jsonFilePath = documentDirectory.appendingPathComponent("user.json")
             let jsonData = try Data(contentsOf: jsonFilePath)
             let decoder = JSONDecoder()
-            var utente = try decoder.decode(Utente.self, from: jsonData)
+            var user = try decoder.decode(user.self, from: jsonData)
             
             // Determina la stagione
-            let stagione = getStagione(occhi: utente.eyeColor, capelli: utente.hairColor, pelle: utente.skinColor)
-            utente.stagione = stagione
+            let stagione = getStagione(occhi: user.eyeColor, capelli: user.hairColor, pelle: user.skinColor)
+            user.stagione = stagione
             
             // Salva i dati aggiornati nel file JSON
             let encoder = JSONEncoder()
             encoder.outputFormatting = .prettyPrinted
-            let updatedJsonData = try encoder.encode(utente)
+            let updatedJsonData = try encoder.encode(user)
             try updatedJsonData.write(to: jsonFilePath)
             
-            return utente
+            return user
         }
     } catch {
         print("Errore durante il caricamento o aggiornamento del file JSON: \(error.localizedDescription)")
@@ -39,22 +39,10 @@ let hairColors = ["Black", "Brown", "Blonde", "Red", "Gray", "Bald"]
 let skinColors = ["Skin Color 1", "Skin Color 2", "Skin Color 3"]*/
 
 func caricaEUpdateStagioneDaFile() -> Int? {
-    do {
-        if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let jsonFilePath = documentDirectory.appendingPathComponent("utente.json")
-            let jsonData = try Data(contentsOf: jsonFilePath)
-            let decoder = JSONDecoder()
-            let utente = try decoder.decode(Utente.self, from: jsonData)
-            
-            // Determina la stagione
-            let stagione = getStagione(occhi: utente.eyeColor, capelli: utente.hairColor, pelle: utente.skinColor)
-            
-            return stagione
-        }
-    } catch {
-        print("Errore durante il caricamento o aggiornamento del file JSON: \(error.localizedDescription)")
+    if  user.eyeColor != nil && user.hairColor != nil && user.skinColor != nil {
+        return getStagione(occhi: user.eyeColor!, capelli: user.hairColor!, pelle: user.skinColor!)
     }
-    return nil
+    return 0
 }
 
 
