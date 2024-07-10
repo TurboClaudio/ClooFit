@@ -17,3 +17,5 @@ struct Utente: Codable{
     var stagione: Int?
     var isTest: Bool
 }
+
+
