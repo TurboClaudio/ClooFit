@@ -6,7 +6,7 @@
 //
 
 import Foundation
-var user: Utente = load("sats.json")
+var user: Utente = load("stats.json")
 
 struct Utente: Codable{
     var age: String
