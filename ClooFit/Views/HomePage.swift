@@ -26,7 +26,7 @@ struct HomePage: View {
         NavigationView {
             ScrollView {
                 LazyVStack(spacing: 20) {
-                    NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: false, upperSelected: defaultOutfit.upper, lowerSelected: defaultOutfit.lower, currentUpperIndex: 0, currentLowerIndex: 0)) {
+                    NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: false, upperSelected: defaultOutfit.upper, lowerSelected: defaultOutfit.lower)) {
                         NewOutfitRow()
                             .background(Color(red: (57.0 / 255.0), green: (46.0 / 255.0), blue: (210.0/255.0)))
                             .cornerRadius(10)
@@ -34,7 +34,7 @@ struct HomePage: View {
                             .padding(.horizontal, 20)
                     }
                     ForEach(informalOutfits) { outfit in
-                        NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: false, upperSelected: outfit.upper, lowerSelected: outfit.lower, currentUpperIndex: getIndexCapo(array: uppers ?? [], id: outfit.upper.id), currentLowerIndex: getIndexCapo(array: lowers ?? [], id: outfit.lower.id))) {
+                        NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: false, upperSelected: outfit.upper, lowerSelected: outfit.lower)) {
                             SuggestionRow(outfit: outfit)
                                 .background(Color(red: (245.0 / 255.0), green: (245.0 / 255.0), blue: (247.0/255.0)))
                                 .cornerRadius(10)
@@ -43,7 +43,7 @@ struct HomePage: View {
                         }
                     }
                     ForEach(formalOutfits) { outfit in
-                        NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: true, upperSelected: outfit.upper, lowerSelected: outfit.lower, currentUpperIndex: getIndexCapo(array: uppers ?? [], id: outfit.upper.id), currentLowerIndex: getIndexCapo(array: lowers ?? [], id: outfit.lower.id))) {
+                        NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: true, upperSelected: outfit.upper, lowerSelected: outfit.lower)) {
                             SuggestionRow(outfit: outfit)
                                 .background(Color(red: (245.0 / 255.0), green: (245.0 / 255.0), blue: (247.0/255.0)))
                                 .cornerRadius(10)

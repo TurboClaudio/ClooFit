@@ -66,8 +66,44 @@ struct ChooseAnOutfit: View {
     @State var currentInformalLowerIndex = 0
     
     @Environment(\.presentationMode) var presentationMode
+    @State private var showAlert = false
+    
+    init(vestiti_eleganti: Bool, upperSelected: article, lowerSelected: article) {
+        
+        let uppersUnfiltered = typeFilter(from: catalogo, type: "top")
+        let uppersUnfiltered2 = genderFilter(from: uppersUnfiltered ?? [], gender: "man")
+
+        let lowersUnfiltered = typeFilter(from: catalogo, type: "bottom")
+        let lowersUnfiltered2 = genderFilter(from: lowersUnfiltered ?? [], gender: "man")
+        
+        self.vestiti_eleganti = vestiti_eleganti
+        self.upperSelected = upperSelected
+        self.lowerSelected = lowerSelected
+        self.currentUpperIndex = getIndexCapo(array: uppers ?? [], id: upperSelected.id)
+        self.currentLowerIndex = getIndexCapo(array: lowers ?? [], id: lowerSelected.id)
+        
+        if vestiti_eleganti {
+            uppers = eleganceFilter(from: uppersUnfiltered2 ?? [], elegance: "formal")
+            lowers = eleganceFilter(from: lowersUnfiltered2 ?? [], elegance: "formal")
+                   
+            currentFormalUpperIndex = currentUpperIndex
+            currentFormalLowerIndex = currentLowerIndex
+            currentInformalUpperIndex = 0
+            currentInformalLowerIndex = 0
+            
+        }else {
+            uppers = eleganceFilter(from: uppersUnfiltered2 ?? [], elegance: "informal")
+            lowers = eleganceFilter(from: lowersUnfiltered2 ?? [], elegance: "informal")
+                   
+            currentInformalUpperIndex = currentUpperIndex
+            currentInformalLowerIndex = currentLowerIndex
+            currentFormalUpperIndex = 0
+            currentInformalLowerIndex = 0
+        }
+    }
         
         var body: some View {
+            
             VStack {
                 UpperSwipeView(items: uppers ?? [], articleSelected: upperSelected, currentPage: $currentUpperIndex)
                     .padding(.bottom, 10)
@@ -98,10 +134,45 @@ struct ChooseAnOutfit: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") {
                         
-                        presentationMode.wrappedValue.dismiss()
+                        if let uppers = uppers {
+                            armadio.append(uppers[currentUpperIndex])
+                        } else {
+                            // Handle the case where 'uppers' is nil
+                            print("Lista vuota")
+                        }
+                        
+                        if let lowers = lowers {
+                            armadio.append(lowers[currentLowerIndex])
+                        } else {
+                            // Handle the case where 'lowers' is nil
+                            print("Lista vuota")
+                        }
+                        
+                        /*
+                        if let uppers = uppers {
+                            aggiungiAlArmadio(vestito: uppers[currentUpperIndex])
+                        } else {
+                            // Handle the case where 'uppers' is nil
+                        }
+                        
+                        if let lowers = lowers {
+                            aggiungiAlArmadio(vestito: lowers[currentLowerIndex])
+                        } else {
+                            // Handle the case where 'lowers' is nil
+                        }*/
+                        showAlert = true
                     }
                 }
             }
+            .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Saved"),
+                            message: Text("Articles have been saved into your closet.\ncurrentUpperIndex: \(currentUpperIndex)\ncurrentLowerIndex: \(currentLowerIndex)\nVestiti Eleganti: \(vestiti_eleganti)"),
+                            dismissButton: .default(Text("OK")) {
+                                presentationMode.wrappedValue.dismiss()
+                            }
+                        )
+                    }
         }
     
     func initializeArticles() {
@@ -135,8 +206,11 @@ struct ChooseAnOutfit: View {
 
         let lowersUnfiltered = typeFilter(from: catalogo, type: "bottom")
         let lowersUnfiltered2 = genderFilter(from: lowersUnfiltered ?? [], gender: "man")
-        
-        if vestiti_eleganti {
+        print("\(currentLowerIndex) and \(currentUpperIndex)");
+        print("\(currentFormalLowerIndex) and \(currentFormalUpperIndex)");
+        //print("\(uppers) and \(lowers)")
+
+        if !vestiti_eleganti {
             uppers = eleganceFilter(from: uppersUnfiltered2 ?? [], elegance: "formal")
             lowers = eleganceFilter(from: lowersUnfiltered2 ?? [], elegance: "formal")
             
