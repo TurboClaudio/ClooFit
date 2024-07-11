@@ -8,8 +8,6 @@
 import Foundation
 
 
-var armadio: [article] = load("armadio.json")
-
 
 func salvaArmadio(){
     do {
@@ -19,7 +17,7 @@ func salvaArmadio(){
         encoder.outputFormatting = .prettyPrinted
         
         // Codifica l'array di utenti in dati JSON
-        let jsonData = try encoder.encode(armadio)
+        let jsonData = try encoder.encode(closet)
         
         // Ottieni il percorso della directory dei documenti
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
@@ -49,8 +47,8 @@ func salvaArmadio(){
 // funzione
 
 func aggiungiAlArmadio(vestito: article) {
-    if !(armadio.contains(where: { $0.id == vestito.id})) && vestito.id != "SO00U" && vestito.id != "SO00L" {
-        armadio.append(vestito)
+    if !(closet.contains(where: { $0.id == vestito.id})) && vestito.id != "SO00U" && vestito.id != "SO00L" {
+        closet.append(vestito)
         print("Aggiunto l'ID \(vestito.id) all'armadio.")
     } else {
         print("L'ID \(vestito.id) è già presente nell'armadio.")
@@ -59,9 +57,9 @@ func aggiungiAlArmadio(vestito: article) {
 }
 
 func rimuoviDaArmadio(vestito: article) {
-    let initialCount = armadio.count
-    armadio.removeAll(where: { $0.id == vestito.id })
-    if armadio.count < initialCount {
+    let initialCount = closet.count
+    closet.removeAll(where: { $0.id == vestito.id })
+    if closet.count < initialCount {
         print("Rimosso l'articolo con ID \(vestito.id) dall'armadio.")
     } else {
         print("L'articolo con ID \(vestito.id) non è presente nell'armadio.")
