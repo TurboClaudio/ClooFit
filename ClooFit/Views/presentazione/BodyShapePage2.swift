@@ -41,7 +41,6 @@ struct BodyShapePage2: View {
                         .cornerRadius(25)
                         .padding(.horizontal)
                 }
-                .navigationBarBackButtonHidden(true)
                 .padding(.bottom)
             }
             .padding()
@@ -52,17 +51,7 @@ struct BodyShapePage2: View {
                     window.makeKeyAndVisible()
                 }
             }) {
-                HStack {
-                    Text("Skip")
-                        .foregroundColor(.black)
-                        .font(.headline)
-                    Image(systemName: "forward.end")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 15, height: 15)
-                        .foregroundColor(.black)
-                    
-                }
+                
             })
            
             .gesture(DragGesture().onEnded({ (gesture) in
@@ -75,6 +64,8 @@ struct BodyShapePage2: View {
             
         }
         .navigationViewStyle(StackNavigationViewStyle()) // Stile della navigation view
+        .navigationBarBackButtonHidden(true)
+
         .preferredColorScheme(.light) // Imposta lo schema di colori preferito a light
     }
 }

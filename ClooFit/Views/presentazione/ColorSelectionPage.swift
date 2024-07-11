@@ -19,7 +19,7 @@ struct ColorSelectionPage: View {
 
                 Spacer()
 
-                NavigationLink(destination: SummaryPage(colorSelections: colorSelections)) {
+                NavigationLink(destination: SummaryPage(colorSelections: colorSelections, eyeColors: eyeColors, hairColors: hairColors, skinColors: skinColors)) {
                     Text("Next")
                         .font(.headline)
                         .padding()
@@ -53,10 +53,12 @@ class ColorSelections: ObservableObject {
 
     // Function to save selections to a JSON file
     func saveToFile() {
-        let selections = [
+        let selections: [String: Any] = [
             "selectedEyeColor": selectedEyeColor ?? "",
             "selectedHairColor": selectedHairColor ?? "",
-            "selectedSkinColor": selectedSkinColor ?? ""
+            "selectedSkinColor": selectedSkinColor ?? "",
+            "selectedStagione": 1,
+            "selectedisTest": true
         ]
         
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
@@ -142,48 +144,96 @@ struct ColorSelectionButtonStyle: ButtonStyle {
 // Summary page with color selections
 struct SummaryPage: View {
     @ObservedObject var colorSelections: ColorSelections
-
+    let eyeColors: [String]
+    let hairColors: [String]
+    let skinColors: [String]
+    @State var openVe = false
     var body: some View {
-        VStack {
-            Text("Summary")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.bottom, 20)
-
-            VStack(alignment: .leading, spacing: 20) {
-                if let eyeColor = colorSelections.selectedEyeColor {
-                    Text("Eye Color: \(eyeColor)")
+        NavigationView{
+            VStack {
+                Text("Summary")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.bottom, 20)
+                
+                VStack(alignment: .leading, spacing: 20) {
+                    if let eyeColor = colorSelections.selectedEyeColor {
+                        HStack {
+                            Image("openart\(eyeColors.firstIndex(of: eyeColor)! + 1)")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
+                            Text("Eye Color: \(eyeColor)")
+                        }
+                    }
+                    if let hairColor = colorSelections.selectedHairColor {
+                        HStack {
+                            Image("hair\(hairColors.firstIndex(of: hairColor)! + 1)")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
+                            Text("Hair Color: \(hairColor)")
+                        }
+                    }
+                    if let skinColor = colorSelections.selectedSkinColor {
+                        HStack {
+                            Image("ivory\(skinColors.firstIndex(of: skinColor)! + 1)")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
+                            Text("Skin Color: \(skinColor)")
+                        }
+                    }
                 }
-                if let hairColor = colorSelections.selectedHairColor {
-                    Text("Hair Color: \(hairColor)")
+                .font(.title2)
+                .foregroundColor(.primary)
+                .padding()
+                
+                Spacer()
+                
+                Button(action: {
+                    colorSelections.saveToFile()
+                    openVe = true
+                    if let userAttributes = loadUserAttributes(from: "stats") {
+                        print("Loaded User Attributes:")
+                        print("Age: \(userAttributes.age)")
+                        print("Gender: \(userAttributes.gender)")
+                        print("Eye Color: \(userAttributes.eyeColor ?? "N/A")")
+                        print("Hair Color: \(userAttributes.hairColor ?? "N/A")")
+                        print("Skin Color: \(userAttributes.skinColor ?? "N/A")")
+                        print("Stagione: \(userAttributes.stagione ?? 0)")
+                        print("Is Test: \(userAttributes.isTest)")
+                    } else {
+                        print("Failed to load user attributes.")
+                    }
+                    
+                }) {
+                    Text("Save")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color(hex: "3C2DDA"))
+                        .foregroundColor(.white)
+                        .cornerRadius(25)
+                        .padding(.horizontal)
                 }
-                if let skinColor = colorSelections.selectedSkinColor {
-                    Text("Skin Color: \(skinColor)")
+                NavigationLink(destination: ContentView(),isActive: $openVe) {
+                    //ContentView()
                 }
             }
-            .font(.title2)
-            .foregroundColor(.primary)
+            .navigationBarBackButtonHidden(true) // Hide the back navigation button
             .padding()
+            .navigationViewStyle(StackNavigationViewStyle()) // Navigation view style
+            .preferredColorScheme(.light) // Preferred color scheme
+        }            .fullScreenCover(isPresented:$openVe) {
+            ContentView()
+        }// Hide the back navigation button
 
-            Spacer()
-            
-            Button(action: {
-                colorSelections.saveToFile()
-            }) {
-                Text("Save")
-                    .font(.headline)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color(hex: "3C2DDA"))
-                    .foregroundColor(.white)
-                    .cornerRadius(25)
-                    .padding(.horizontal)
-            }
-        }
-        .navigationBarBackButtonHidden(true) // Hide the back navigation button
-        .padding()
-        .navigationViewStyle(StackNavigationViewStyle()) // Navigation view style
-        .preferredColorScheme(.light) // Preferred color scheme
-    }
+    } // Hide the back navigation button
+
 }
 
+// Extension to add a Color initializer using a hex value
