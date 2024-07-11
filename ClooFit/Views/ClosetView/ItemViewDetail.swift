@@ -16,45 +16,60 @@ struct ItemViewDetail: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             
-            item.image
+            ZStack {
+                Rectangle()
+                    .fill(Color.white.opacity(0.3))
+                    .frame(width: 340, height: 370) // Dimensioni fisse del contenitore
+                
+                item.image
+                    .resizable()
+                    .scaledToFit()
+            }
             
             Text(item.mainColor.capitalized + " " + item.name.capitalized)
                 .font(.largeTitle)
                 .bold()
-            HStack {
-                Image(systemName: "tshirt")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding()
-                Text("\(item.material)")
-                    .font(.system(size: 25))
+            Divider()
+            HStack (alignment: .center){
+                HStack {
+                    Image(systemName: "tshirt")
+                        .scaleEffect(1.5)
+                    //.resizable()
+                    //.frame(width: 30, height: 30)
+                        //.padding()
+                    Text("\(item.material.capitalized)")
+                        .font(.system(size: 20))
+
+                    //Spacer()
+                }
+                .padding(.horizontal)
+                
+                HStack {
+                    Image(systemName: "graduationcap")
+                        .scaleEffect(1.5)
+                    //.resizable()
+                    //.frame(width: 30, height: 30)
+                        //.padding()
+                    Text("\(item.elegance.capitalized)")
+                        .font(.system(size: 20))
+                    //Spacer()
+                }
+                .padding(.horizontal)
+                
+                HStack {
+                    Image(systemName: "cloud.sun")
+                        .scaleEffect(1.5)
+                    //.resizable()
+                    //.frame(width: 30, height: 30)
+                        //.padding()
+                    Text("\(item.weather.capitalized)")
+                        .font(.system(size: 20))
+                    //Spacer()
+                }
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
             
-            HStack {
-                Image(systemName: "graduationcap")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding()
-                Text("\(item.elegance)")
-                    .font(.system(size: 25))
-            }
-            .padding(.horizontal)
             
-            HStack {
-                Image(systemName: "cloud.sun")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding()
-                Text("\(item.weather)")
-                    .font(.system(size: 25))
-            }
-            .padding(.horizontal)
-            
-            // Text("Material: \(item.material)")
-            // Text("Color: \(item.mainColor)")
-            // Text("Elegance: \(item.elegance)")
-            // Text("Weather: \(item.weather)")
             Spacer()
         }
         .padding()
@@ -65,5 +80,5 @@ struct ItemViewDetail: View {
 
 
 #Preview {
-    ItemViewDetail(item: catalogo[2])
+    ItemViewDetail(item: catalogo[31])
 }

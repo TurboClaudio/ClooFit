@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//var closet: [article] = load("armadio.json")
+var closet: [article] = load("armadio.json")
 
 // Funzione per ottenere i diversi tipi di 'name'
 func getUniqueNames(from articles: [article]) -> Set<String> {
@@ -45,7 +45,7 @@ struct CategoryView: View {
     var typeName: String
     
     var body: some View {
-        let filteredList: [article] = getArticles(ofType: typeName, from: armadio)
+        let filteredList: [article] = getArticles(ofType: typeName, from: closet)
         VStack(alignment: .leading) {
             Text(typeName.capitalized)
                 .font(.title)
@@ -79,7 +79,7 @@ struct ClosetView: View {
 }
 */
 struct ClosetView: View {
-    let differentTypes = getUniqueNames(from: armadio)
+    let differentTypes = getUniqueNames(from: closet)
     
     var body: some View {
         NavigationView {

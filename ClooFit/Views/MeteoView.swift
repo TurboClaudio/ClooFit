@@ -131,6 +131,7 @@ struct MeteoView: View {
                                                     .resizable()
                                                     .scaledToFit()
                                                     .frame(width: 30, height: 30)
+                            Spacer().frame(width: 15)
                             Text("\(WMOWeatherCode.description(for: weather.current_weather.weathercode))")
                         }
                     } else {

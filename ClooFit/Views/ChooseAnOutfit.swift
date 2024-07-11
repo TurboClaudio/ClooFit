@@ -112,12 +112,14 @@ struct ChooseAnOutfit: View {
                     .padding(.bottom, 10)
                 
                 VStack(alignment: .leading) {
-                    HStack {
+                    /*HStack {
                         Image(systemName: "cloud")
                             .imageScale(.large)
                             .padding(.horizontal, 10)
                         Text("Maybe it's raining...")
-                    }
+                    }*/
+                    MeteoView()
+                        .offset(x: 12, y: -20)
                     HStack {
                         Image(systemName: "puzzlepiece.extension.fill")
                             .imageScale(.large)
@@ -135,14 +137,14 @@ struct ChooseAnOutfit: View {
                     Button("Done") {
                         
                         if let uppers = uppers {
-                            armadio.append(uppers[currentUpperIndex])
+                            closet.append(uppers[currentUpperIndex])
                         } else {
                             // Handle the case where 'uppers' is nil
                             print("Lista vuota")
                         }
                         
                         if let lowers = lowers {
-                            armadio.append(lowers[currentLowerIndex])
+                            closet.append(lowers[currentLowerIndex])
                         } else {
                             // Handle the case where 'lowers' is nil
                             print("Lista vuota")
@@ -167,7 +169,7 @@ struct ChooseAnOutfit: View {
             .alert(isPresented: $showAlert) {
                         Alert(
                             title: Text("Saved"),
-                            message: Text("Articles have been saved into your closet.\ncurrentUpperIndex: \(currentUpperIndex)\ncurrentLowerIndex: \(currentLowerIndex)\nVestiti Eleganti: \(vestiti_eleganti)"),
+                            message: Text("Articles have been saved into your closet."),
                             dismissButton: .default(Text("OK")) {
                                 presentationMode.wrappedValue.dismiss()
                             }
