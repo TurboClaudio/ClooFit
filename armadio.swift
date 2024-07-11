@@ -49,7 +49,7 @@ func salvaArmadio(){
 // funzione
 
 func aggiungiAlArmadio(vestito: article) {
-    if !armadio.contains(where: { $0.id == vestito.id }) {
+    if !(armadio.contains(where: { $0.id == vestito.id})) && vestito.id != "SO00U" && vestito.id != "SO00L" {
         armadio.append(vestito)
         print("Aggiunto l'ID \(vestito.id) all'armadio.")
     } else {
