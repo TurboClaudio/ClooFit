@@ -1083,6 +1083,118 @@
         "type" : "bottom",
         "elegance" : "informal",
         "weather" : "cold"
+    },
+    
+    {
+        "id": "SO68",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 28,
+            "g" : 28,
+            "b" : 28
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO69",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "grey",
+        "mainColorRGB" : {
+            "r" : 121,
+            "g" : 121,
+            "b" : 121
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO70",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 224,
+            "g" : 224,
+            "b" : 224
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO71",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "beige",
+        "mainColorRGB" : {
+            "r" : 224,
+            "g" : 211,
+            "b" : 171
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO72",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "red",
+        "mainColorRGB" : {
+            "r" : 186,
+            "g" : 63,
+            "b" : 47
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO73",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "blue",
+        "mainColorRGB" : {
+            "r" : 28,
+            "g" : 62,
+            "b" : 109
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO74",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "green",
+        "mainColorRGB" : {
+            "r" : 37,
+            "g" : 89,
+            "b" : 62
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
     }
     
     
