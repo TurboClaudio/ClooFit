@@ -57,12 +57,12 @@ class ColorSelections: ObservableObject {
             "selectedEyeColor": selectedEyeColor ?? "",
             "selectedHairColor": selectedHairColor ?? "",
             "selectedSkinColor": selectedSkinColor ?? "",
-            "selectedStagione": 1,
+            "selectedStagione": getStagione(occhi: selectedEyeColor ?? "", capelli: selectedHairColor ?? "", pelle: selectedSkinColor ?? ""),
             "selectedisTest": true
         ]
         
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let fileURL = documentDirectory.appendingPathComponent("stats.json")
+            let fileURL = documentDirectory.appendingPathComponent("ddt.json")
             
             do {
                 var existingData = [String: Any]()
@@ -214,7 +214,7 @@ struct SummaryPage: View {
                     Text("Save")
                         .font(.headline)
                         .padding()
-                        .frame(maxWidth: .infinity)
+                        .frame(width: 200) // Sostituisci 200 con la larghezza desiderata
                         .background(Color(hex: "3C2DDA"))
                         .foregroundColor(.white)
                         .cornerRadius(25)
@@ -231,9 +231,51 @@ struct SummaryPage: View {
         }            .fullScreenCover(isPresented:$openVe) {
             ContentView()
         }// Hide the back navigation button
-
+        .overlay(
+                   VStack {
+                       Spacer()
+                       HStack {
+                           Spacer()
+                           NavigationLink(destination: InformationPage()) {
+                               Image(systemName: "info.circle")
+                                   .resizable()
+                                   .frame(width: 50, height: 50)
+                                   .foregroundColor(Color(hex: "3C2DDA"))
+                                   .padding()
+                                   
+                           }
+                           
+                       }
+                   }
+               )
+               .navigationBarBackButtonHidden(true) // Hide the back navigation button
+               .navigationViewStyle(StackNavigationViewStyle()) // Navigation view style
+               .preferredColorScheme(.light) // Preferred color scheme
     } // Hide the back navigation button
 
 }
+
+// Extension to add a Color initializer using a hex value
+struct InformationPage: View {
+    var body: some View {
+        VStack(alignment: .leading) { // Allineamento a sinistra per migliorare la leggibilità
+                   Text("Information")
+                       .font(.largeTitle)
+                       .fontWeight(.bold)
+                       .padding(.bottom, 20)
+                   
+                   Text("Images in 'Welcome' page (the first page)  and 'Choose your palette' page by [Streamline](https://www.figma.com/@streamline_hq), from [Milano illustrations](https://www.figma.com/community/file/1105485675187256849), used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en). Modified by [Cloofit].\nImages in 'Style' page by [xiaonail](https://xiaonail.com/dist/#/), from [Set of avatars vector illustration](https://www.figma.com/community/file/1167351239844186393/set-of-avatars-vector-illustration?searchSessionId=lyhbbjhn-a01e372gadm), used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en).")
+                       .font(.title2)
+                       .padding(.bottom, 20)
+                   
+                   Spacer()
+               }
+               .padding()
+               .navigationViewStyle(StackNavigationViewStyle()) // Stile di navigazione stack
+               .preferredColorScheme(.light) // Schema di colori preferito
+           }
+       }
+
+
 
 // Extension to add a Color initializer using a hex value

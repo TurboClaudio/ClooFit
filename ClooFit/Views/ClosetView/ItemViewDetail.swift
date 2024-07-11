@@ -38,7 +38,7 @@ struct ItemViewDetail: View {
                     //.frame(width: 30, height: 30)
                         //.padding()
                     Text("\(item.material.capitalized)")
-                        .font(.system(size: 20))
+                        .font(.system(size: 17))
 
                     //Spacer()
                 }
@@ -51,7 +51,7 @@ struct ItemViewDetail: View {
                     //.frame(width: 30, height: 30)
                         //.padding()
                     Text("\(item.elegance.capitalized)")
-                        .font(.system(size: 20))
+                        .font(.system(size: 17))
                     //Spacer()
                 }
                 .padding(.horizontal)
@@ -63,7 +63,7 @@ struct ItemViewDetail: View {
                     //.frame(width: 30, height: 30)
                         //.padding()
                     Text("\(item.weather.capitalized)")
-                        .font(.system(size: 20))
+                        .font(.system(size: 16))
                     //Spacer()
                 }
                 .padding(.horizontal)
@@ -80,5 +80,5 @@ struct ItemViewDetail: View {
 
 
 #Preview {
-    ItemViewDetail(item: catalogo[31])
+    ItemViewDetail(item: catalogo[73])
 }

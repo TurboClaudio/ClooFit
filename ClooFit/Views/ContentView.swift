@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @State private var selectedTab = 0
     
     var body: some View {
@@ -21,6 +20,7 @@ struct ContentView: View {
             ClosetView()
                 .tabItem {
                     Label("Closet", systemImage: "tag")
+                        
                 }
                 .tag(1)
             Palette()
@@ -28,10 +28,13 @@ struct ContentView: View {
                     Label("Colors", systemImage: "rays")
                         .tag(2)
                 }
+                
         }
+        .accentColor(Color(red: 60 / 255, green: 45 / 255, blue: 218 / 255))
     }
 }
 
 #Preview {
     ContentView()
+        .accentColor(Color(red: 60 / 255, green: 45 / 255, blue: 218 / 255))
 }

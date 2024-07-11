@@ -7,6 +7,14 @@
 
 import Foundation
 
+class Closet: ObservableObject {
+    @Published var items: [article] = []
+    
+    func add(_ item: article) {
+        items.append(item)
+    }
+}
+
 var catalogo: [article] = load("clothes.json")
 
 func load<T: Decodable>(_ filename: String) -> T {

@@ -17,7 +17,7 @@ struct AgePage: View {
                     .fontWeight(.bold)
                     .padding(.top, 10)
 
-                Text("Select the age with which you identify.")
+                Text("Select your age")
                     .font(.body)
                     .foregroundColor(.secondary)
                     .padding(.top, -16)
@@ -109,7 +109,7 @@ func writeAgeToFile(age: String) {
     let ageData = ["selectedAge": age]
     
     if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-        let fileURL = documentDirectory.appendingPathComponent("stats.json")
+        let fileURL = documentDirectory.appendingPathComponent("ddt.json")
         
         do {
             var existingData = [String: Any]()

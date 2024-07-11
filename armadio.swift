@@ -1,73 +1,56 @@
-//
-//  File.swift
-//  ClooFit
-//
-//  Created by Gabriele Faraone on 07/07/24.
-//
 
 import Foundation
+import SwiftUI
 
 
-
-func salvaArmadio(){
-    do {
-        // Crea un'istanza di JSONEncoder
-        let encoder = JSONEncoder()
-        // Imposta l'opzione prettyPrinted per una migliore leggibilità
-        encoder.outputFormatting = .prettyPrinted
-        
-        // Codifica l'array di utenti in dati JSON
-        let jsonData = try encoder.encode(closet)
-        
-        // Ottieni il percorso della directory dei documenti
-        if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            // Crea il percorso completo del file
-            let jsonFilePath = documentDirectory.appendingPathComponent("armadio.json")
-            
-            // Scrivi i dati JSON nel file
-            try jsonData.write(to: jsonFilePath)
-            
-            print("File JSON scritto con successo a: \(jsonFilePath)")
-            
-            // Per visualizzare il JSON in formato stringa
-            if let jsonString = String(data: jsonData, encoding: .utf8) {
-                print("Contenuto del file JSON:\n\(jsonString)")
-            }
-        }
-    } catch {
-        print("Errore durante la scrittura del file JSON: \(error.localizedDescription)")
-    }
-}
-
-
-
-
-// fare funzioni per il salvataggio dei capi nel mio armadio personale, gia quella che c'è
-
-// funzione
-
-func aggiungiAlArmadio(vestito: article) {
-    if !(closet.contains(where: { $0.id == vestito.id})) && vestito.id != "SO00U" && vestito.id != "SO00L" {
-        closet.append(vestito)
-        print("Aggiunto l'ID \(vestito.id) all'armadio.")
-    } else {
-        print("L'ID \(vestito.id) è già presente nell'armadio.")
-    }
-    salvaArmadio()
-}
-
-func rimuoviDaArmadio(vestito: article) {
-    let initialCount = closet.count
-    closet.removeAll(where: { $0.id == vestito.id })
-    if closet.count < initialCount {
-        print("Rimosso l'articolo con ID \(vestito.id) dall'armadio.")
-    } else {
-        print("L'articolo con ID \(vestito.id) non è presente nell'armadio.")
-    }
-    salvaArmadio()
-}
-
-
+  
+ 
+  
+  func aggiungiAlArmadio(vestito: article) {
+      if !(closet.contains { $0.id == vestito.id }) && vestito.id != "SO00U" && vestito.id != "SO00L" {
+          closet.append(vestito)
+          salvaArmadio()
+      } else {
+          print("L'ID \(vestito.id) è già presente nell'armadio o non è valido.")
+      }
+  }
+  
+  func rimuoviDaArmadio(vestito: article) {
+      closet.removeAll { $0.id == vestito.id }
+      salvaArmadio()
+  }
+  
+ func readArmadio(fileName: String) -> [article]? {
+      if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+          let fileURL = documentDirectory.appendingPathComponent(fileName)
+          do {
+              let data = try Data(contentsOf: fileURL)
+              let decoder = JSONDecoder()
+              let closet = try decoder.decode([article].self, from: data)
+              return closet
+          } catch {
+              print("Failed to read JSON data: \(error.localizedDescription)")
+          }
+      }
+      return nil
+  }
+  
+  func salvaArmadio() {
+      do {
+          let encoder = JSONEncoder()
+          encoder.outputFormatting = .prettyPrinted
+          
+          let jsonData = try encoder.encode(closet)
+          
+          if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+              let fileURL = documentDirectory.appendingPathComponent("armadio.json")
+              try jsonData.write(to: fileURL)
+              print("File JSON scritto con successo a: \(fileURL)")
+          }
+      } catch {
+          print("Errore durante la scrittura del file JSON: \(error.localizedDescription)")
+      }
+  }
 
 
 

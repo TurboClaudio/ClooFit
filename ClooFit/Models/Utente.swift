@@ -6,11 +6,12 @@
 //
 
 import Foundation
-var user: UserAttributes = load("stats.json")
+var user: UserAttributes = readJSONFILE(fileName: "ddt.json") ?? UserAttributes(age: "18", gender: "Male", eyeColor: "Brown", hairColor: "Brown", skinColor: "1", stagione: 3, isTest: false)
+  
 
 struct UserAttributes: Codable {
-    var age: String
-    var gender: String
+    var age: String?
+    var gender: String?
     var eyeColor: String?
     var hairColor: String?
     var skinColor: String?
@@ -39,7 +40,7 @@ func loadUserAttributes(from fileName: String) -> UserAttributes? {
         return nil
     }
 
-    let fileURL = documentDirectory.appendingPathComponent("\(fileName).json")
+    let fileURL = documentDirectory.appendingPathComponent("ddt.json")
 
     // Check if the file exists
     if !FileManager.default.fileExists(atPath: fileURL.path) {

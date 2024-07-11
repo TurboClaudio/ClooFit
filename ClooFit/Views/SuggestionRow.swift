@@ -46,14 +46,15 @@ struct SuggestionRow: View {
                 outfit.upper.image
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 136, height: 91)
+                    .frame(width: 143, height: 98)
                     .shadow(radius: 5)
+                    .padding()
                 outfit.lower.image
                     .resizable()
                     .scaledToFit()
                     .frame(width: 140, height: 140)
                     .offset(x: -1, y: -35)
-                    .padding(.bottom, -25)
+                    .padding(.bottom, -35)
                     .shadow(radius: 5)
             }
         }

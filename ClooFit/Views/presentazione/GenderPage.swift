@@ -5,8 +5,8 @@ struct GenderPage: View {
     @State private var selectedGender: String?
     
     let genderOptions = [
-        ("Male", "male_image1"),    // Replace with actual image names
-        ("Female", "female_image1") // Replace with actual image names
+        ("man", "male_image1"),    // Replace with actual image names
+        ("woman", "female_image1") // Replace with actual image names
     ]
     
     @State private var progressBarWidth: CGFloat = 100
@@ -27,7 +27,7 @@ struct GenderPage: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 
-                Text("Select the style with which you identify.")
+                Text("Select the style with which you identify yourself")
                     .font(.body) // Adjusted to body font size
                     .foregroundColor(.secondary) // Thinner appearance
                     .multilineTextAlignment(.center)
@@ -125,7 +125,7 @@ func saveGenderToFile(gender: String) {
     let selections = ["selectedGender": gender]
     
     if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-        let fileURL = documentDirectory.appendingPathComponent("stats.json")
+        let fileURL = documentDirectory.appendingPathComponent("ddt.json")
         
         do {
             let data = try JSONSerialization.data(withJSONObject: selections, options: .prettyPrinted)

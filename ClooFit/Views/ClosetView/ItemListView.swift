@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-var closet: [article] = load("armadio.json")
+var closet: [article] = []
+
+
 
 // Funzione per ottenere i diversi tipi di 'name'
 func getUniqueNames(from articles: [article]) -> Set<String> {
@@ -28,7 +30,7 @@ struct ItemListView: View {
     let filteredList : [article]
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            LazyHStack(spacing:10) {
+            HStack(spacing:10) {
                 ForEach(filteredList) { article in
                     //ItemView(item: article)
                     NavigationLink(destination: ItemViewDetail(item: article)) {

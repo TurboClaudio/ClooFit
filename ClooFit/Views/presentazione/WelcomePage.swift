@@ -19,7 +19,7 @@ struct WelcomePage: View {
                     .padding(.horizontal)
                     .foregroundColor(.primary) // Ensure text color remains consistent
                 
-                Text("Create your unique style and \n reach the best from a click")
+                Text("Create your unique style and \n reach the best with a click")
                     .font(.system(size: 15, weight: .light)) // Make the text lighter
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)

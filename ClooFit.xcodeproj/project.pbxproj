@@ -19,9 +19,7 @@
 		4F18306A2C3E75DC001F8EC8 /* ColorSelectionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1830612C3E75DC001F8EC8 /* ColorSelectionPage.swift */; };
 		4F18306B2C3E75DC001F8EC8 /* writeAgeToFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1830622C3E75DC001F8EC8 /* writeAgeToFile.swift */; };
 		4F18306C2C3E75DC001F8EC8 /* Anteprime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1830632C3E75DC001F8EC8 /* Anteprime.swift */; };
-		4F18306D2C3E75DC001F8EC8 /* stats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F1830642C3E75DC001F8EC8 /* stats.json */; };
 		4F18306E2C3E75DC001F8EC8 /* writeGenderToFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1830652C3E75DC001F8EC8 /* writeGenderToFile.swift */; };
-		5CDAF1F62C3C3B6F00F3618C /* armadio.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CDAF1F52C3C3B6F00F3618C /* armadio.json */; };
 		5CDAF1FA2C3C3BB100F3618C /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF1F72C3C3BB100F3618C /* ItemListView.swift */; };
 		5CDAF1FB2C3C3BB100F3618C /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF1F82C3C3BB100F3618C /* ItemView.swift */; };
 		5CDAF1FD2C3C3BE200F3618C /* ItemViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF1FC2C3C3BE200F3618C /* ItemViewDetail.swift */; };
@@ -32,6 +30,7 @@
 		89BC4B652C3D3735007D6C35 /* armadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC4B642C3D3735007D6C35 /* armadio.swift */; };
 		89BC4B692C3E7905007D6C35 /* stagione.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC4B682C3E7905007D6C35 /* stagione.swift */; };
 		A716DF712C39467900CCA571 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A716DF702C39467900CCA571 /* Palette.swift */; };
+		A766EC152C407966006F7728 /* Documents in Resources */ = {isa = PBXBuildFile; fileRef = A766EC142C407964006F7728 /* Documents */; };
 		C68F04E92C36C95A00621532 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04E72C36C95A00621532 /* HomePage.swift */; };
 		C68F04EA2C36C95A00621532 /* SuggestionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04E82C36C95A00621532 /* SuggestionRow.swift */; };
 		C68F04EF2C36C96B00621532 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F04EC2C36C96A00621532 /* Outfit.swift */; };
@@ -76,9 +75,7 @@
 		4F1830612C3E75DC001F8EC8 /* ColorSelectionPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSelectionPage.swift; sourceTree = "<group>"; };
 		4F1830622C3E75DC001F8EC8 /* writeAgeToFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = writeAgeToFile.swift; sourceTree = "<group>"; };
 		4F1830632C3E75DC001F8EC8 /* Anteprime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anteprime.swift; sourceTree = "<group>"; };
-		4F1830642C3E75DC001F8EC8 /* stats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stats.json; sourceTree = "<group>"; };
 		4F1830652C3E75DC001F8EC8 /* writeGenderToFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = writeGenderToFile.swift; sourceTree = "<group>"; };
-		5CDAF1F52C3C3B6F00F3618C /* armadio.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = armadio.json; sourceTree = "<group>"; };
 		5CDAF1F72C3C3BB100F3618C /* ItemListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		5CDAF1F82C3C3BB100F3618C /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		5CDAF1FC2C3C3BE200F3618C /* ItemViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewDetail.swift; sourceTree = "<group>"; };
@@ -88,6 +85,7 @@
 		89BC4B642C3D3735007D6C35 /* armadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = armadio.swift; path = ../../armadio.swift; sourceTree = "<group>"; };
 		89BC4B682C3E7905007D6C35 /* stagione.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stagione.swift; sourceTree = "<group>"; };
 		A716DF702C39467900CCA571 /* Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		A766EC142C407964006F7728 /* Documents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documents; sourceTree = "<group>"; };
 		C68F04E72C36C95A00621532 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		C68F04E82C36C95A00621532 /* SuggestionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SuggestionRow.swift; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 1; };
 		C68F04EC2C36C96A00621532 /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 				4F18305D2C3E75DC001F8EC8 /* BodyShapePage2.swift */,
 				4F1830612C3E75DC001F8EC8 /* ColorSelectionPage.swift */,
 				4F1830602C3E75DC001F8EC8 /* GenderPage.swift */,
-				4F1830642C3E75DC001F8EC8 /* stats.json */,
 				4F18305E2C3E75DC001F8EC8 /* WelcomePage.swift */,
 				4F1830622C3E75DC001F8EC8 /* writeAgeToFile.swift */,
 				4F1830652C3E75DC001F8EC8 /* writeGenderToFile.swift */,
@@ -186,8 +183,8 @@
 		5C2340B72C36ADCD0058CB33 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A766EC142C407964006F7728 /* Documents */,
 				89BC4B5E2C36A9BE007D6C35 /* clothes.json */,
-				5CDAF1F52C3C3B6F00F3618C /* armadio.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -210,6 +207,13 @@
 			path = ClooFit/Views/ClosetView;
 			sourceTree = SOURCE_ROOT;
 		};
+		A766EBCA2C406A21006F7728 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C68F04ED2C36C96A00621532 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +233,7 @@
 				C69C69B72C2ECB5D00FE4305 /* ClooFitUITests */,
 				C69C699B2C2ECB5C00FE4305 /* Products */,
 				5CDAF1F42C3C38CF00F3618C /* Recovered References */,
+				A766EBCA2C406A21006F7728 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -349,6 +354,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					stats,
+				);
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
@@ -394,10 +402,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C69C69A52C2ECB5D00FE4305 /* Preview Assets.xcassets in Resources */,
-				5CDAF1F62C3C3B6F00F3618C /* armadio.json in Resources */,
+				A766EC152C407966006F7728 /* Documents in Resources */,
 				89BC4B5F2C36A9BE007D6C35 /* clothes.json in Resources */,
 				C69C69A22C2ECB5D00FE4305 /* Assets.xcassets in Resources */,
-				4F18306D2C3E75DC001F8EC8 /* stats.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +624,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ClooFit/Preview Content\"";
-				DEVELOPMENT_TEAM = 4R47JNGZ76;
+				DEVELOPMENT_TEAM = 497HBCJJV3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClooFit/Info.plist;
@@ -634,7 +641,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = appleFoundation.ClooFi;
+				PRODUCT_BUNDLE_IDENTIFIER = aClooFi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -653,7 +660,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ClooFit/Preview Content\"";
-				DEVELOPMENT_TEAM = 4R47JNGZ76;
+				DEVELOPMENT_TEAM = 497HBCJJV3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClooFit/Info.plist;
@@ -670,7 +677,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = appleFoundation.ClooFi;
+				PRODUCT_BUNDLE_IDENTIFIER = aClooFi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

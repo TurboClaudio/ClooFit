@@ -10,12 +10,12 @@ import Foundation
 func generateOutfit(array:[article], weather: String, gender: String, elegance: String) -> Outfit{
     var upper: article
     var lower: article
-    var subArray: [article] = weatherFilter(from: genderFilter(from: eleganceFilter(from: typeFilter(from: array, type: "top") ?? array , elegance: elegance) ?? array , gender: gender) ?? array , weather: weather) ?? array
-    upper = subArray.randomElement() ?? catalogo[2]
+    var subArray: [article] = weatherFilter(from: genderFilter(from: eleganceFilter(from: typeFilter(from: array, type: "top") ?? array , elegance: elegance) ?? array , gender: user.gender ?? "") ?? array , weather: weather) ?? array
+    upper = subArray.randomElement() ?? catalogo[1]
      var subArrayLower = weatherFilter(from: genderFilter(from: eleganceFilter(from: typeFilter(from: array, type: "bottom") ?? array , elegance: elegance) ?? array , gender: gender) ?? array , weather: weather) ?? array
     var count = 0
     repeat{
-        lower = subArrayLower.randomElement() ?? catalogo[32]
+        lower = subArrayLower.randomElement() ?? catalogo[44]
         count += 1
     }while(areColorsHarmonious(upper: upper, lower: lower) && count <= 50)
     

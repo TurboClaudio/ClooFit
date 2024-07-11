@@ -1,23 +1,21 @@
-//  Paletyr.swift
-//  ClooFit
-//
-//  Created by Flavio Stuppia on 05/07/24.
-//
 
 import SwiftUI
 
+
 struct Palette: View {
-    var utente: Utente
+    @State private var user = loadUserAttributes(from: "ddt.json") ?? UserAttributes(age: "18", hairColor: "Brown", skinColor: "1", stagione : 3, isTest: false) 
     private var mostraBanner: Bool{
-        return !utente.isTest
+        return !user.isTest
     }
+     
+    
     
     //1 Autumn, 2 Spring, 3 Summer, 4 Winter
     private var image: String {
         if mostraBanner {
             return "Default"
         } else {
-            switch utente.stagione {
+            switch user.stagione {
             case 1:
                 return "Autumn"
             case 2:
@@ -36,7 +34,7 @@ struct Palette: View {
         if mostraBanner {
             return "What are your colors?"
         } else {
-            switch utente.stagione {
+            switch user.stagione {
             case 1:
                 return "You're an Autumn"
             case 2:
@@ -147,37 +145,40 @@ struct Palette: View {
                         }
                         else{
                             VStack {
-                                
+                                NavigationLink(destination: ColorSelectionPage()) {
                                 ZStack {
                                     
-                                    // Background of the banner
-                                    RoundedRectangle(cornerRadius: 6)
-                                        .foregroundColor(Color(red: 60 / 255, green: 45 / 255, blue: 218 / 255))
-                                        .frame(height: 60)
-                                    
-                                    
-                                    // Banner content
-                                    VStack(alignment: .leading) {
+                                
+                                        
+                                        // Background of the banner
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .foregroundColor(Color(red: 60 / 255, green: 45 / 255, blue: 218 / 255))
+                                            .frame(height: 60)
                                         
                                         
-                                        HStack {
-                                            Text("Retake the test")
-                                                .font(.title2)
-                                                .bold()
-                                                .foregroundColor(.white.opacity(0.8))
-                                                .padding(.horizontal)
+                                        // Banner content
+                                        VStack(alignment: .leading) {
                                             
-                                            Spacer()
                                             
-                                            Image(systemName: "chevron.right")
-                                                .foregroundColor(.white)
-                                                .font(.system(size: 20))
-                                                .padding(.horizontal)
+                                            HStack {
+                                                Text("Retake the test")
+                                                    .font(.title2)
+                                                    .bold()
+                                                    .foregroundColor(.white.opacity(0.8))
+                                                    .padding(.horizontal)
+                                                
+                                                Spacer()
+                                                
+                                                Image(systemName: "chevron.right")
+                                                    .foregroundColor(.white)
+                                                    .font(.system(size: 20))
+                                                    .padding(.horizontal)
+                                            }
+                                            
                                         }
-                                    }
-                                    
-                                    .padding()
-                                }
+                                        
+                                        .padding()
+                                    }}
                                 .padding(.horizontal)
                                 .shadow(radius: 5)
                             }
@@ -196,5 +197,5 @@ struct Palette: View {
 }
 
 #Preview {
-    Palette(utente:Utente(eta: 15, nome: "Franco", preferenzeStile: "bbb",  stagione: 4, isTest: true))
+    Palette()
 }

@@ -9,7 +9,7 @@ import Foundation
 
 
 //salva l'utente in un file json
-func salvaUtente(){
+func salvaUtente(user: UserAttributes, fileName: String){
     do {
         // Crea un'istanza di JSONEncoder
         let encoder = JSONEncoder()
@@ -22,12 +22,12 @@ func salvaUtente(){
         // Ottieni il percorso della directory dei documenti
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             // Crea il percorso completo del file
-            let jsonFilePath = documentDirectory.appendingPathComponent("stats.json")
+            let fileURL = documentDirectory.appendingPathComponent(fileName)
             
             // Scrivi i dati JSON nel file
-            try jsonData.write(to: jsonFilePath)
+            try jsonData.write(to: fileURL)
             
-            print("File JSON scritto con successo a: \(jsonFilePath)")
+            print("File JSON scritto con successo a: \(fileURL)")
             
             // Per visualizzare il JSON in formato stringa
             if let jsonString = String(data: jsonData, encoding: .utf8) {
@@ -42,6 +42,7 @@ func salvaUtente(){
 // passa array article e filtra per tipo passato (top or bottom or topbottom)
 func typeFilter(from array: [article], type: String) -> [article]? {
     let subarray: [article] = array.filter{ $0.type == type}
+   
     return subarray
 }
 
@@ -144,4 +145,20 @@ func areColorsSimilar(color1: colorRGB, color2: colorRGB) -> Bool {
     }
 
     return ris
+}
+
+func readJSONFILE(fileName: String)-> UserAttributes?{
+    if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
+        let fileURL = documentDirectory.appendingPathComponent(fileName)
+        do{
+            let data = try Data(contentsOf: fileURL)
+            let decoder = JSONDecoder()
+            let user = try decoder.decode(UserAttributes.self, from: data)
+            return user
+        }
+        catch{
+            print("Failed to read JSon data: \(error.localizedDescription)")
+        }
+    }
+    return nil
 }
