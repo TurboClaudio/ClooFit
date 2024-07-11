@@ -6,19 +6,16 @@
 //
 
 import Foundation
-
+var user: Utente = load("stats.json")
 
 struct Utente: Codable{
-    var age: Int
+    var age: String
     var gender: String
-    var eyeColor: String
-    var eyeColorRGB: colorRGB
-    var hairColor: String
-    var hairColorRGB: colorRGB
-    var skinColor: String
-    var skinColorRGB: colorRGB
-    /*var stagione: Int{
-        return getStagione()
-    }*/
+    var eyeColor: String?
+    var hairColor: String?
+    var skinColor: String?
+    var stagione: Int?
     var isTest: Bool
 }
+
+

@@ -795,7 +795,409 @@
         "type" : "bottom",
         "elegance" : "formal",
         "weather" : "cold"
+    },
+    
+    {
+        "id": "SO50",
+        "gender": "woman",
+        "name": "tank top",
+        "material": "cotton",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 237,
+            "g" : 237,
+            "b" : 237
+        },
+        "type" : "top",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO51",
+        "gender": "woman",
+        "name": "short skirt",
+        "material": "silk",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 20,
+            "g" : 20,
+            "b" : 20
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO52",
+        "gender": "woman",
+        "name": "short skirt",
+        "material": "silk",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 220,
+            "g" : 220,
+            "b" : 220
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO53",
+        "gender": "woman",
+        "name": "pants",
+        "material": "silk",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 44,
+            "g" : 44,
+            "b" : 40
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO54",
+        "gender": "woman",
+        "name": "pants",
+        "material": "silk",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 222,
+            "g" : 220,
+            "b" : 210
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO55",
+        "gender": "woman",
+        "name": "pants",
+        "material": "silk",
+        "mainColor": "beige",
+        "mainColorRGB" : {
+            "r" : 236,
+            "g" : 223,
+            "b" : 186
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO56",
+        "gender": "woman",
+        "name": "pants",
+        "material": "silk",
+        "mainColor": "red",
+        "mainColorRGB" : {
+            "r" : 180,
+            "g" : 70,
+            "b" : 64
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO57",
+        "gender": "woman",
+        "name": "pants",
+        "material": "silk",
+        "mainColor": "blue",
+        "mainColorRGB" : {
+            "r" : 68,
+            "g" : 94,
+            "b" : 121
+        },
+        "type" : "bottom",
+        "elegance" : "formal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO58",
+        "gender": "man",
+        "name": "cargo",
+        "material": "cotton",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 40,
+            "g" : 40,
+            "b" : 40
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO59",
+        "gender": "man",
+        "name": "cargo",
+        "material": "cotton",
+        "mainColor": "grey",
+        "mainColorRGB" : {
+            "r" : 98,
+            "g" : 98,
+            "b" : 98
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO60",
+        "gender": "man",
+        "name": "cargo",
+        "material": "cotton",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 205,
+            "g" : 205,
+            "b" : 205
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO61",
+        "gender": "man",
+        "name": "cargo",
+        "material": "cotton",
+        "mainColor": "blue",
+        "mainColorRGB" : {
+            "r" : 52,
+            "g" : 70,
+            "b" : 93
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO62",
+        "gender": "man",
+        "name": "cargo",
+        "material": "cotton",
+        "mainColor": "military green",
+        "mainColorRGB" : {
+            "r" : 109,
+            "g" : 101,
+            "b" : 77
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO63",
+        "gender": "unisex",
+        "name": "tracksuit",
+        "material": "cotton",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 41,
+            "g" : 41,
+            "b" : 41
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO64",
+        "gender": "unisex",
+        "name": "tracksuit",
+        "material": "cotton",
+        "mainColor": "grey",
+        "mainColorRGB" : {
+            "r" : 105,
+            "g" : 105,
+            "b" : 105
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO65",
+        "gender": "unisex",
+        "name": "tracksuit",
+        "material": "cotton",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 225,
+            "g" : 225,
+            "b" : 225
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO66",
+        "gender": "unisex",
+        "name": "tracksuit",
+        "material": "cotton",
+        "mainColor": "blue",
+        "mainColorRGB" : {
+            "r" : 31,
+            "g" : 47,
+            "b" : 69
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO67",
+        "gender": "unisex",
+        "name": "tracksuit",
+        "material": "cotton",
+        "mainColor": "green",
+        "mainColorRGB" : {
+            "r" : 78,
+            "g" : 103,
+            "b" : 90
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "cold"
+    },
+    
+    {
+        "id": "SO68",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "black",
+        "mainColorRGB" : {
+            "r" : 28,
+            "g" : 28,
+            "b" : 28
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO69",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "grey",
+        "mainColorRGB" : {
+            "r" : 121,
+            "g" : 121,
+            "b" : 121
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO70",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "white",
+        "mainColorRGB" : {
+            "r" : 224,
+            "g" : 224,
+            "b" : 224
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO71",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "beige",
+        "mainColorRGB" : {
+            "r" : 224,
+            "g" : 211,
+            "b" : 171
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO72",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "red",
+        "mainColorRGB" : {
+            "r" : 186,
+            "g" : 63,
+            "b" : 47
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO73",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "blue",
+        "mainColorRGB" : {
+            "r" : 28,
+            "g" : 62,
+            "b" : 109
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
+    },
+    
+    {
+        "id": "SO74",
+        "gender": "unisex",
+        "name": "shorts",
+        "material": "cotton",
+        "mainColor": "green",
+        "mainColorRGB" : {
+            "r" : 37,
+            "g" : 89,
+            "b" : 62
+        },
+        "type" : "bottom",
+        "elegance" : "informal",
+        "weather" : "hot"
     }
+    
+    
     
     
 ]

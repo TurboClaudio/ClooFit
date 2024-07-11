@@ -17,7 +17,8 @@ var lowers = eleganceFilter(from: lowersUnfiltered2 ?? [], elegance: "informal")
 
 struct HomePage: View {
     
-    @State var outfits = [generateOutfit(array: catalogo, weather: "cold", gender: "unisex", elegance: "informal"), generateOutfit(array: catalogo, weather: "cold", gender: "unisex", elegance: "informal")]
+    @State var informalOutfits = [generateOutfit(array: catalogo, weather: "cold", gender: "unisex", elegance: "informal"), generateOutfit(array: catalogo, weather: "cold", gender: "unisex", elegance: "informal")]
+    @State var formalOutfits = [generateOutfit(array: catalogo, weather: "cold", gender: "unisex", elegance: "formal"), generateOutfit(array: catalogo, weather: "cold", gender: "unisex", elegance: "formal")]
     
     @State var defaultOutfit = Outfit(upper: catalogo[2], lower: catalogo[26])
     
@@ -25,15 +26,24 @@ struct HomePage: View {
         NavigationView {
             ScrollView {
                 LazyVStack(spacing: 20) {
-                    NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: false, upperSelected: defaultOutfit.upper, lowerSelected: defaultOutfit.lower, currentUpperIndex: 0, currentLowerIndex: 0)) {
+                    NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: false, upperSelected: defaultOutfit.upper, lowerSelected: defaultOutfit.lower)) {
                         NewOutfitRow()
                             .background(Color(red: (57.0 / 255.0), green: (46.0 / 255.0), blue: (210.0/255.0)))
                             .cornerRadius(10)
                             .shadow(radius: 5)
                             .padding(.horizontal, 20)
                     }
-                    ForEach(outfits) { outfit in
-                        NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: false, upperSelected: outfit.upper, lowerSelected: outfit.lower, currentUpperIndex: getIndexCapo(array: uppers ?? [], id: outfit.upper.id), currentLowerIndex: getIndexCapo(array: lowers ?? [], id: outfit.lower.id))) {
+                    ForEach(informalOutfits) { outfit in
+                        NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: false, upperSelected: outfit.upper, lowerSelected: outfit.lower)) {
+                            SuggestionRow(outfit: outfit)
+                                .background(Color(red: (245.0 / 255.0), green: (245.0 / 255.0), blue: (247.0/255.0)))
+                                .cornerRadius(10)
+                                .shadow(radius: 5)
+                                .padding(.horizontal, 20)
+                        }
+                    }
+                    ForEach(formalOutfits) { outfit in
+                        NavigationLink(destination: ChooseAnOutfit(vestiti_eleganti: true, upperSelected: outfit.upper, lowerSelected: outfit.lower)) {
                             SuggestionRow(outfit: outfit)
                                 .background(Color(red: (245.0 / 255.0), green: (245.0 / 255.0), blue: (247.0/255.0)))
                                 .cornerRadius(10)
