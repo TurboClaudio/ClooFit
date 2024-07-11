@@ -55,6 +55,7 @@ func aggiungiAlArmadio(vestito: article) {
     } else {
         print("L'ID \(vestito.id) è già presente nell'armadio.")
     }
+    salvaArmadio()
 }
 
 func rimuoviDaArmadio(vestito: article) {
@@ -65,6 +66,7 @@ func rimuoviDaArmadio(vestito: article) {
     } else {
         print("L'articolo con ID \(vestito.id) non è presente nell'armadio.")
     }
+    salvaArmadio()
 }
 
 
