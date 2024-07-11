@@ -1,13 +1,9 @@
-//  Paletyr.swift
-//  ClooFit
-//
-//  Created by Flavio Stuppia on 05/07/24.
-//
 
 import SwiftUI
 
+
 struct Palette: View {
-    var utente: Utente
+    var utente: UserAttributes
     private var mostraBanner: Bool{
         return !utente.isTest
     }
@@ -151,7 +147,7 @@ struct Palette: View {
                                 ZStack {
                                     
                                     // Background of the banner
-                                    RoundedRectangle(cornerRadius: 6)
+                                    RoundedRectangle(cornerRadius: 15)
                                         .foregroundColor(Color(red: 60 / 255, green: 45 / 255, blue: 218 / 255))
                                         .frame(height: 60)
                                     
@@ -196,5 +192,5 @@ struct Palette: View {
 }
 
 #Preview {
-    Palette(utente:Utente(eta: 15, nome: "Franco", preferenzeStile: "bbb",  stagione: 4, isTest: true))
+    Palette(utente: UserAttributes(age: "18", gender: "Male", eyeColor: "Brown", hairColor: "Brown", skinColor: "Brown", stagione: 4, isTest: true))
 }

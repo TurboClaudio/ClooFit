@@ -23,7 +23,7 @@ struct ContentView: View {
                     Label("Closet", systemImage: "tag")
                 }
                 .tag(1)
-            Palette()
+            Palette(utente: UserAttributes(age: "18" , gender: "Male", eyeColor: "Brown", hairColor: "Brown", skinColor: "Brown", stagione: 2, isTest: true))
                 .tabItem {
                     Label("Colors", systemImage: "rays")
                         .tag(2)
