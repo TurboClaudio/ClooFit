@@ -25,6 +25,9 @@
 		5CDAF1FA2C3C3BB100F3618C /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF1F72C3C3BB100F3618C /* ItemListView.swift */; };
 		5CDAF1FB2C3C3BB100F3618C /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF1F82C3C3BB100F3618C /* ItemView.swift */; };
 		5CDAF1FD2C3C3BE200F3618C /* ItemViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF1FC2C3C3BE200F3618C /* ItemViewDetail.swift */; };
+		5CDAF2072C3E7D6A00F3618C /* MeteoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF2062C3E7D6A00F3618C /* MeteoView.swift */; };
+		5CDAF2092C3E7F8D00F3618C /* OpenMeteoSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 5CDAF2082C3E7F8D00F3618C /* OpenMeteoSdk */; };
+		5CDAF20D2C3E8D4800F3618C /* CurrentPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAF20C2C3E8D4800F3618C /* CurrentPosition.swift */; };
 		89BC4B5F2C36A9BE007D6C35 /* clothes.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BC4B5E2C36A9BE007D6C35 /* clothes.json */; };
 		89BC4B652C3D3735007D6C35 /* armadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC4B642C3D3735007D6C35 /* armadio.swift */; };
 		89BC4B692C3E7905007D6C35 /* stagione.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC4B682C3E7905007D6C35 /* stagione.swift */; };
@@ -79,6 +82,8 @@
 		5CDAF1F72C3C3BB100F3618C /* ItemListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		5CDAF1F82C3C3BB100F3618C /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		5CDAF1FC2C3C3BE200F3618C /* ItemViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewDetail.swift; sourceTree = "<group>"; };
+		5CDAF2062C3E7D6A00F3618C /* MeteoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoView.swift; sourceTree = "<group>"; };
+		5CDAF20C2C3E8D4800F3618C /* CurrentPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPosition.swift; sourceTree = "<group>"; };
 		89BC4B5E2C36A9BE007D6C35 /* clothes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clothes.json; sourceTree = "<group>"; };
 		89BC4B642C3D3735007D6C35 /* armadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = armadio.swift; path = ../../armadio.swift; sourceTree = "<group>"; };
 		89BC4B682C3E7905007D6C35 /* stagione.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stagione.swift; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDAF2092C3E7F8D00F3618C /* OpenMeteoSdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +159,7 @@
 				C68F04E82C36C95A00621532 /* SuggestionRow.swift */,
 				C69C699F2C2ECB5C00FE4305 /* ContentView.swift */,
 				E83858782C382E870074F42B /* ChooseAnOutfit.swift */,
+				5CDAF2062C3E7D6A00F3618C /* MeteoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +167,7 @@
 		5C2340B42C3699540058CB33 /* DataHandling */ = {
 			isa = PBXGroup;
 			children = (
+				5CDAF20C2C3E8D4800F3618C /* CurrentPosition.swift */,
 			);
 			path = DataHandling;
 			sourceTree = "<group>";
@@ -291,6 +299,9 @@
 			dependencies = (
 			);
 			name = ClooFit;
+			packageProductDependencies = (
+				5CDAF2082C3E7F8D00F3618C /* OpenMeteoSdk */,
+			);
 			productName = ClooFit;
 			productReference = C69C699A2C2ECB5C00FE4305 /* ClooFit.app */;
 			productType = "com.apple.product-type.application";
@@ -363,6 +374,9 @@
 				Base,
 			);
 			mainGroup = C69C69912C2ECB5C00FE4305;
+			packageReferences = (
+				5CDAF2052C3E7D5B00F3618C /* XCRemoteSwiftPackageReference "sdk" */,
+			);
 			productRefGroup = C69C699B2C2ECB5C00FE4305 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -422,11 +436,13 @@
 				4F1830662C3E75DC001F8EC8 /* BodyShapePage2.swift in Sources */,
 				4F18300B2C3ADF13001F8EC8 /* jsonFunction.swift in Sources */,
 				4F1830032C3828D9001F8EC8 /* Utente.swift in Sources */,
+				5CDAF2072C3E7D6A00F3618C /* MeteoView.swift in Sources */,
 				4F1830012C37FB67001F8EC8 /* articolo.swift in Sources */,
 				E83858792C382E870074F42B /* ChooseAnOutfit.swift in Sources */,
 				4F18306C2C3E75DC001F8EC8 /* Anteprime.swift in Sources */,
 				C68F04FC2C3D88BF00621532 /* NewOutfitRow.swift in Sources */,
 				4F18306E2C3E75DC001F8EC8 /* writeGenderToFile.swift in Sources */,
+				5CDAF20D2C3E8D4800F3618C /* CurrentPosition.swift in Sources */,
 				4F1830132C3D12D6001F8EC8 /* generateOutfit.swift in Sources */,
 				5CDAF1FD2C3C3BE200F3618C /* ItemViewDetail.swift in Sources */,
 				4F182FFF2C37F919001F8EC8 /* ModelData.swift in Sources */,
@@ -503,6 +519,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -566,6 +583,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -594,14 +612,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ClooFit/Preview Content\"";
-				DEVELOPMENT_TEAM = VQR7W3J87K;
+				DEVELOPMENT_TEAM = F2ZQLUDT4W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClooFit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ClooFit;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We want to access your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -612,8 +634,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = appleFoundationClaudio.ClooFit;
+				PRODUCT_BUNDLE_IDENTIFIER = appleFoundation.ClooFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -625,14 +648,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ClooFit/Preview Content\"";
-				DEVELOPMENT_TEAM = VQR7W3J87K;
+				DEVELOPMENT_TEAM = F2ZQLUDT4W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClooFit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ClooFit;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We want to access your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -643,8 +670,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = appleFoundationClaudio.ClooFit;
+				PRODUCT_BUNDLE_IDENTIFIER = appleFoundation.ClooFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -656,9 +684,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VQR7W3J87K;
+				DEVELOPMENT_TEAM = F2ZQLUDT4W;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -676,9 +705,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VQR7W3J87K;
+				DEVELOPMENT_TEAM = F2ZQLUDT4W;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -695,9 +725,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VQR7W3J87K;
+				DEVELOPMENT_TEAM = F2ZQLUDT4W;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = appleFoundationClaudio.ClooFitUITests;
@@ -713,9 +744,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VQR7W3J87K;
+				DEVELOPMENT_TEAM = F2ZQLUDT4W;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = appleFoundationClaudio.ClooFitUITests;
@@ -767,6 +799,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5CDAF2052C3E7D5B00F3618C /* XCRemoteSwiftPackageReference "sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/open-meteo/sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5CDAF2082C3E7F8D00F3618C /* OpenMeteoSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CDAF2052C3E7D5B00F3618C /* XCRemoteSwiftPackageReference "sdk" */;
+			productName = OpenMeteoSdk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C69C69922C2ECB5C00FE4305 /* Project object */;
 }
