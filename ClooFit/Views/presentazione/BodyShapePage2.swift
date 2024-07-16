@@ -21,7 +21,7 @@ struct BodyShapePage2: View {
                     .foregroundColor(Color.primary) // Usa Color.primary per il colore del testo
                     .accessibility(addTraits: .isHeader) // Aggiunge l'attributo di accessibilità per le intestazioni
                 
-                Text("Select the colors for armochromy analysis")
+                Text("Select the colors for armochromy analysis.")
                     .font(.system(size: 15, weight: .light))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)

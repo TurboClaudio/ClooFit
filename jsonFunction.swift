@@ -79,7 +79,7 @@ func cercaCapo(array:[article], id: String)-> article?{
     return ris
 }
 
-func getIndexCapo(array:[article], id: String)-> Int{
+func getIndexCapo(array:[article], id: String)-> Int? {
     var count = 0
     for fit in array {
         if (fit.id == id){

@@ -115,53 +115,62 @@ func fetchWeather(latitude: Double, longitude: Double, completion: @escaping (We
     }.resume()
 }
 
+// Definizione di funzione hot/cold
+func temperatureDescription(for temperature: Double) -> String {
+    return temperature > 20.0 ? "hot" : "cold"
+}
+
 struct MeteoView: View {
     @StateObject var locationManager = CurrentPosition()
-        @State private var weather: Weather?
-        
-        var body: some View {
-            VStack {
-                if let city = locationManager.city {
-                    // Text("Città: \(city)")
-                    if let weather = weather {
-                        // Text("Temperatura: \(weather.current_weather.temperature)°C")
-                        // Text("Weather code: \(weather.current_weather.weathercode)")
-                        HStack {
-                            WeatherImageProvider.imageName(for: weather.current_weather.weathercode)
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 30, height: 30)
-                            Spacer().frame(width: 15)
-                            Text("\(WMOWeatherCode.description(for: weather.current_weather.weathercode))")
-                        }
-                    } else {
-                        Text("Caricamento meteo...")
-                            .onAppear {
-                                if let location = locationManager.location {
-                                    fetchWeather(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude) { weather in
-                                        self.weather = weather
-                                    }
-                                }
-                            }
+    @State var weather: Weather?
+    @Binding var temperature: Double?
+    
+    var body: some View {
+        VStack {
+            if let city = locationManager.city {
+                // Text("Città: \(city)")
+                if let weather = weather {
+                    // Text("Temperatura: \(weather.current_weather.temperature)°C")
+                    // Text("Weather code: \(weather.current_weather.weathercode)")
+                    HStack {
+                        WeatherImageProvider.imageName(for: weather.current_weather.weathercode)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30, height: 30)
+                        Spacer().frame(width: 15)
+                        Text("\(WMOWeatherCode.description(for: weather.current_weather.weathercode))")
+                    }
+                    .onAppear {
+                        temperature = weather.current_weather.temperature
                     }
                 } else {
-                    Text("Ottenendo la tua posizione...")
+                    Text("Caricamento meteo...")
+                        .onAppear {
+                            if let location = locationManager.location {
+                                fetchWeather(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude) { weather in
+                                    self.weather = weather
+                                }
+                            }
+                        }
                 }
+            } else {
+                Text("Ottenendo la tua posizione...")
             }
-            .onAppear {
-                // Se la posizione è già disponibile, carica il meteo
-                if let location = locationManager.location {
-                    fetchWeather(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude) { weather in
-                        self.weather = weather
-                    }
+        }
+        .onAppear {
+            // Se la posizione è già disponibile, carica il meteo
+            if let location = locationManager.location {
+                fetchWeather(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude) { weather in
+                    self.weather = weather
                 }
             }
         }
+    }
 }
 
 #Preview {
     // ItemListView(filteredList: closet)
     // CategoryView(typeName: "pants")
     // ClosetView()
-    MeteoView()
+    MeteoView(temperature: .constant(nil))
 }

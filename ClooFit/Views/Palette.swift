@@ -2,7 +2,11 @@
 import SwiftUI
 
 
-
+struct Palette: View {
+    @State private var user = loadUserAttributes(from: "ddt.json") ?? UserAttributes(age: "18", hairColor: "Brown", skinColor: "1", stagione : 3, isTest: false) 
+    private var mostraBanner: Bool{
+        return !user.isTest
+    }
      
     
     
@@ -46,121 +50,110 @@ import SwiftUI
     }
     
     
-var body: some View {
-    NavigationView {
-        VStack(alignment: .leading) {
-            Spacer()
-            
-            
-            // Top HStack with profile icon
-            /* HStack {
-             Spacer() // To push the icon to the right
-             
-             Image(systemName: "person.circle")
-             .font(.system(size: 30))
-             .foregroundColor(Color(red: 60 / 255, green: 45 / 255, blue: 218 / 255))
-             .padding(.horizontal)
-             }
-             .padding(.top)*/
-            
-            ScrollView {
-                VStack(alignment: .leading) {
-                    
-                    Spacer()
-                    // Clothes Palette Section
+    var body: some View {
+        NavigationView {
+            VStack(alignment: .leading) {
+                Spacer()
+                
+                
+                // Top HStack with profile icon
+                /* HStack {
+                 Spacer() // To push the icon to the right
+                 
+                 Image(systemName: "person.circle")
+                 .font(.system(size: 30))
+                 .foregroundColor(Color(red: 60 / 255, green: 45 / 255, blue: 218 / 255))
+                 .padding(.horizontal)
+                 }
+                 .padding(.top)*/
+                
+                ScrollView {
                     VStack(alignment: .leading) {
                         
-                        /*  Text("Clothes Palette")
-                         .font(.title)
-                         .fontWeight(.semibold)
-                         .padding(.horizontal)*/
-                        
-                        HStack {
-                            Image(image)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(height:  300)
-                                .padding(.horizontal)
-                            
-                        }
-                        
-                    }
-                    
-                    
-                    
-                    HStack{
                         Spacer()
-                        Text(palette)
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                        
-                            .padding(.horizontal)
-                        Spacer()
-                    }
-                    
-                    if mostraBanner{
-                        // Banner Section
-                        VStack {
+                        // Clothes Palette Section
+                        VStack(alignment: .leading) {
                             
-                            ZStack {
-                                // Background of the banner
-                                RoundedRectangle(cornerRadius: 15)
-                                    .foregroundColor(Color(red: 60 / 255, green: 45 / 255, blue: 218 / 255))
-                                    .frame(height: 150)
+                            /*  Text("Clothes Palette")
+                             .font(.title)
+                             .fontWeight(.semibold)
+                             .padding(.horizontal)*/
+                            
+                            HStack {
+                                Image(image)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height:  300)
+                                    .padding(.horizontal)
                                 
-                                
-                                // Banner content
-                                VStack(spacing: 10) {
-                                    Text("Find out what your palettes are, to best match clothes")
-                                        .font(.title2)
-                                        .foregroundColor(.white)
-                                        .bold()
-                                        .frame(width: 300, alignment: .leading)
-                                    
-                                    HStack {
-                                        Text("Take the test")
-                                            .font(.headline)
-                                            .foregroundColor(.white.opacity(0.8))
-                                            .padding(.horizontal)
-                                        
-                                        Spacer()
-                                        
-                                        Image(systemName: "chevron.right")
-                                            .foregroundColor(.white)
-                                            .font(.system(size: 20))
-                                            .padding(.horizontal)
-                                    }
-                                }
-                                
-                                .padding()
                             }
-                            .padding(.horizontal)
-                            .shadow(radius: 5)
+                            
                         }
-                        .padding(.top)
-                    }
-                    else{
-                        VStack {
-                            NavigationLink(destination: ColorSelectionPage()) {
+                        
+                        
+                        
+                        HStack{
+                            Spacer()
+                            Text(palette)
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                            
+                                .padding(.horizontal)
+                            Spacer()
+                        }
+                        
+                        if mostraBanner{
+                            // Banner Section
+                            VStack {
+                                
                                 ZStack {
-                                    
-                                    <<<<<<< HEAD
-                                    
-                                    
                                     // Background of the banner
                                     RoundedRectangle(cornerRadius: 15)
                                         .foregroundColor(Color(red: 60 / 255, green: 45 / 255, blue: 218 / 255))
-                                        .frame(height: 60)
-                                    =======
-                                    // Background of the banner
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .foregroundColor(Color(red: 60 / 255, green: 45 / 255, blue: 218 / 255))
-                                        .frame(height: 60)
+                                        .frame(height: 150)
                                     
                                     
                                     // Banner content
-                                    VStack(alignment: .leading) {
-                                        >>>>>>> 2bb61f04113347ec7f6fda6ee5389cbe3ee352b3
+                                    VStack(spacing: 10) {
+                                        Text("Find out what your palettes are, to best match clothes")
+                                            .font(.title2)
+                                            .foregroundColor(.white)
+                                            .bold()
+                                            .frame(width: 300, alignment: .leading)
+                                        
+                                        HStack {
+                                            Text("Take the test")
+                                                .font(.headline)
+                                                .foregroundColor(.white.opacity(0.8))
+                                                .padding(.horizontal)
+                                            
+                                            Spacer()
+                                            
+                                            Image(systemName: "chevron.right")
+                                                .foregroundColor(.white)
+                                                .font(.system(size: 20))
+                                                .padding(.horizontal)
+                                        }
+                                    }
+                                    
+                                    .padding()
+                                }
+                                .padding(.horizontal)
+                                .shadow(radius: 5)
+                            }
+                            .padding(.top)
+                        }
+                        else{
+                            VStack {
+                                NavigationLink(destination: ColorSelectionPage()) {
+                                ZStack {
+                                    
+                                
+                                        
+                                        // Background of the banner
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .foregroundColor(Color(red: 60 / 255, green: 45 / 255, blue: 218 / 255))
+                                            .frame(height: 60)
                                         
                                         
                                         // Banner content
@@ -200,6 +193,9 @@ var body: some View {
             .navigationTitle("Your Palette")
         }
         
-        
     }
+}
+
+#Preview {
+    Palette()
 }

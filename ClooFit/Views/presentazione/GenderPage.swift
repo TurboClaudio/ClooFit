@@ -27,7 +27,7 @@ struct GenderPage: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 
-                Text("Select the style with which you identify yourself")
+                Text("Select the style with which you identify yourself.")
                     .font(.body) // Adjusted to body font size
                     .foregroundColor(.secondary) // Thinner appearance
                     .multilineTextAlignment(.center)

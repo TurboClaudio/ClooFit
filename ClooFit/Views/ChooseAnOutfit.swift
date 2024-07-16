@@ -58,6 +58,7 @@ struct ChooseAnOutfit: View {
     @State var currentFormalLowerIndex = 0
     @State var currentInformalLowerIndex = 0
     @State var selectedWeather: String = "hot"
+    @State private var temperature : Double?
     
     @State private var navigateToContentView = false
     @State private var showAlert = false
@@ -75,8 +76,8 @@ struct ChooseAnOutfit: View {
         let lowersUnfiltered = typeFilter(from: catalogo, type: "bottom")
         let lowersUnfiltered2 = genderFilter(from: lowersUnfiltered ?? [], gender: user.gender ?? "")
         
-        self.currentUpperIndex = getIndexCapo(array: uppersUnfiltered2 ?? [], id: upperSelected.id)
-        self.currentLowerIndex = getIndexCapo(array: lowersUnfiltered2 ?? [], id: lowerSelected.id)
+        self.currentUpperIndex = getIndexCapo(array: uppersUnfiltered2 ?? [], id: upperSelected.id)!
+        self.currentLowerIndex = getIndexCapo(array: lowersUnfiltered2 ?? [], id: lowerSelected.id)!
         
         if vestiti_eleganti {
             self.currentFormalUpperIndex = currentUpperIndex
@@ -98,8 +99,14 @@ struct ChooseAnOutfit: View {
                 .padding(.bottom, 10)
             
             VStack(alignment: .leading) {
-                MeteoView()
+                MeteoView(temperature: $temperature)
                     .offset(x: 12, y: -20)
+                    .onChange(of: temperature){
+                        if let t=temperature{
+                            selectedWeather = temperatureDescription(for: t)
+                        }
+                    }
+                //Text(selectedWeather)
                 
                 HStack {
                     Image(systemName: "puzzlepiece.extension.fill")
@@ -199,4 +206,8 @@ struct ChooseAnOutfit: View {
             currentLowerIndex = currentInformalLowerIndex
         }
     }
+}
+
+#Preview {
+    ChooseAnOutfit(vestiti_eleganti: false, upperSelected: catalogo[2], lowerSelected: catalogo[31])
 }
